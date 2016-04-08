@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="Airport" syncable="YES">
+        <attribute name="airportID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Coordinate" representedClassName="Coordinate" syncable="YES">
+        <attribute name="beaconID" optional="YES" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="coorLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationCor" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="locationID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="locationCor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordinate" inverseName="coorLocation" inverseEntity="Coordinate" syncable="YES"/>
+        <relationship name="locationPas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Passenger" inverseName="passengerPos" inverseEntity="Passenger" syncable="YES"/>
+        <relationship name="locationType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SeviceCategory" inverseName="cateLoc" inverseEntity="SeviceCategory" syncable="YES"/>
+    </entity>
+    <entity name="LocationCategory" syncable="YES">
+        <attribute name="level" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationCateID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="terminal" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Passenger" representedClassName="Passenger" syncable="YES">
+        <attribute name="boardingTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="passengerPos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationPas" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="SeviceCategory" representedClassName="Category" syncable="YES">
+        <attribute name="categoryID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cateLoc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationType" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SeviceCategory" positionX="-20" positionY="270" width="128" height="88"/>
+        <element name="Coordinate" positionX="99" positionY="101" width="128" height="103"/>
+        <element name="Location" positionX="-288" positionY="105" width="128" height="148"/>
+        <element name="Passenger" positionX="-110" positionY="-10" width="128" height="118"/>
+        <element name="LocationCategory" positionX="-90" positionY="162" width="128" height="88"/>
+        <element name="Airport" positionX="-81" positionY="171" width="128" height="73"/>
+    </elements>
+</model>
