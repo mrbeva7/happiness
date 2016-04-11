@@ -5,7 +5,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Coordinate" representedClassName="Coordinate" syncable="YES">
-        <attribute name="beaconID" optional="YES" syncable="YES"/>
+        <attribute name="beaconID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="x" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="y" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="coorLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationCor" inverseEntity="Location" syncable="YES"/>
@@ -37,11 +37,11 @@
         <relationship name="cateLoc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationType" inverseEntity="Location" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SeviceCategory" positionX="-20" positionY="270" width="128" height="88"/>
+        <element name="Airport" positionX="-81" positionY="171" width="128" height="73"/>
         <element name="Coordinate" positionX="99" positionY="101" width="128" height="103"/>
         <element name="Location" positionX="-288" positionY="105" width="128" height="148"/>
-        <element name="Passenger" positionX="-110" positionY="-10" width="128" height="118"/>
         <element name="LocationCategory" positionX="-90" positionY="162" width="128" height="88"/>
-        <element name="Airport" positionX="-81" positionY="171" width="128" height="73"/>
+        <element name="Passenger" positionX="-110" positionY="-10" width="128" height="118"/>
+        <element name="SeviceCategory" positionX="-20" positionY="270" width="128" height="88"/>
     </elements>
 </model>
