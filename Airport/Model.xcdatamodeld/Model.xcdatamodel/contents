@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="Airport" syncable="YES">
+        <attribute name="airportID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Coordinate" syncable="YES">
+        <attribute name="x" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Location" syncable="YES">
+        <attribute name="locationID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="locationCoor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordinate" syncable="YES"/>
+        <relationship name="locationTypeCate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationCategory" syncable="YES"/>
+    </entity>
+    <entity name="LocationCategory" syncable="YES">
+        <attribute name="areaName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="locationtype" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Passenger" syncable="YES">
+        <attribute name="boardingTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="positionCoor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordinate" syncable="YES"/>
+    </entity>
+    <entity name="Service" syncable="YES">
+        <attribute name="location" optional="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="serviceCate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ServiceCategory" syncable="YES"/>
+        <relationship name="serviceloc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="ServiceCategory" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serviceID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Location" positionX="-234" positionY="146" width="128" height="133"/>
+        <element name="LocationCategory" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="Airport" positionX="-225" positionY="-30" width="128" height="75"/>
+        <element name="ServiceCategory" positionX="115" positionY="35" width="128" height="73"/>
+        <element name="Coordinate" positionX="16" positionY="159" width="128" height="75"/>
+        <element name="Passenger" positionX="205" positionY="188" width="128" height="118"/>
+        <element name="Service" positionX="-54" positionY="378" width="128" height="118"/>
+    </elements>
+</model>
