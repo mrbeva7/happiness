@@ -36,7 +36,7 @@
                                     <rect key="frame" x="33" y="345" width="34" height="21"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airportMap" translatesAutoresizingMaskIntoConstraints="NO" id="80T-WX-teU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AirportMap" translatesAutoresizingMaskIntoConstraints="NO" id="80T-WX-teU">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="80" y="405" width="240" height="128"/>
@@ -124,6 +124,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2WG-Id-Vhc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lxp-pm-sZm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCc-nc-KbI">
@@ -162,6 +163,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Jdu-Pp-XH2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pnw-Lo-cK3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security Check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqh-55-DSm">
@@ -245,12 +247,6 @@
                                     <rect key="frame" x="160" y="131" width="80" height="21"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statusbar" translatesAutoresizingMaskIntoConstraints="NO" id="sfe-eb-h2I">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="80" y="105" width="240" height="128"/>
-                                </variation>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toilet" translatesAutoresizingMaskIntoConstraints="NO" id="rOJ-vC-YOB">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,7 +296,6 @@
                                 <exclude reference="W0B-rU-ga3"/>
                                 <exclude reference="yTF-pu-zDw"/>
                                 <exclude reference="Foa-0l-Y2n"/>
-                                <exclude reference="sfe-eb-h2I"/>
                                 <exclude reference="rOJ-vC-YOB"/>
                                 <exclude reference="Cem-La-bXQ"/>
                                 <exclude reference="H0f-s5-oDP"/>
@@ -317,7 +312,6 @@
                                 <include reference="W0B-rU-ga3"/>
                                 <include reference="yTF-pu-zDw"/>
                                 <include reference="Foa-0l-Y2n"/>
-                                <include reference="sfe-eb-h2I"/>
                                 <include reference="rOJ-vC-YOB"/>
                                 <include reference="Cem-La-bXQ"/>
                                 <include reference="H0f-s5-oDP"/>
@@ -337,12 +331,15 @@
             <objects>
                 <tableViewController id="a7T-q7-aPC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AvO-5L-mSj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EiR-Kd-FAG">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EiR-Kd-FAG" id="Bjy-0P-dSl">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -359,8 +356,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AirportMap" width="295" height="207"/>
         <image name="QR" width="753" height="753"/>
-        <image name="airportMap" width="295" height="207"/>
         <image name="charger" width="256" height="256"/>
         <image name="exchange" width="313" height="313"/>
         <image name="info" width="313" height="313"/>
@@ -369,7 +366,6 @@
         <image name="restaurant" width="154" height="128"/>
         <image name="shop" width="102" height="102"/>
         <image name="smoking" width="300" height="300"/>
-        <image name="statusbar" width="1" height="1"/>
         <image name="toilet" width="212" height="212"/>
     </resources>
 </document>
