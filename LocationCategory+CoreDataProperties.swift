@@ -1,5 +1,5 @@
 //
-//  Passenger+CoreDataProperties.swift
+//  LocationCategory+CoreDataProperties.swift
 //  Airport
 //
 //  Created by iosdev on 12.4.2016.
@@ -12,12 +12,11 @@
 import Foundation
 import CoreData
 
-extension Passenger {
+extension LocationCategory {
 
-    @NSManaged var boardingTime: NSDate?
+    @NSManaged var level: String?
+    @NSManaged var locationCateID: String?
     @NSManaged var name: String?
-    @NSManaged var position: NSNumber?
-    @NSManaged var uid: NSNumber?
-    @NSManaged var passengerPos: Location?
+    @NSManaged var locationLevel: Location?
 
 }

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
-    <entity name="Airport" syncable="YES">
+    <entity name="Airport" representedClassName=".Airport" syncable="YES">
         <attribute name="airportID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="Coordinate" representedClassName="Coordinate" syncable="YES">
-        <attribute name="beaconID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="x" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="y" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="coorLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationCor" inverseEntity="Location" syncable="YES"/>
+        <relationship name="airportLoc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="airport" inverseEntity="Location" syncable="YES"/>
     </entity>
     <entity name="Location" representedClassName="Location" syncable="YES">
         <attribute name="locationID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="locationLevel" optional="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="locationCor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordinate" inverseName="coorLocation" inverseEntity="Coordinate" syncable="YES"/>
-        <relationship name="locationPas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Passenger" inverseName="passengerPos" inverseEntity="Passenger" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="y" optional="YES" syncable="YES"/>
+        <relationship name="airport" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Airport" inverseName="airportLoc" inverseEntity="Airport" syncable="YES"/>
+        <relationship name="locationCateLevel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationCategory" inverseName="locationLevel" inverseEntity="LocationCategory" syncable="YES"/>
+        <relationship name="locationPas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Passenger" inverseName="passengerPos" inverseEntity="Passenger" syncable="YES"/>
         <relationship name="locationType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SeviceCategory" inverseName="cateLoc" inverseEntity="SeviceCategory" syncable="YES"/>
     </entity>
-    <entity name="LocationCategory" syncable="YES">
+    <entity name="LocationCategory" representedClassName=".LocationCategory" syncable="YES">
         <attribute name="level" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="locationCateID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="terminal" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="locationLevel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationCateLevel" inverseEntity="Location" syncable="YES"/>
     </entity>
     <entity name="Passenger" representedClassName="Passenger" syncable="YES">
         <attribute name="boardingTime" optional="YES" attributeType="Date" syncable="YES"/>
@@ -37,11 +37,10 @@
         <relationship name="cateLoc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationType" inverseEntity="Location" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Airport" positionX="-81" positionY="171" width="128" height="73"/>
-        <element name="Coordinate" positionX="99" positionY="101" width="128" height="103"/>
-        <element name="Location" positionX="-288" positionY="105" width="128" height="148"/>
-        <element name="LocationCategory" positionX="-90" positionY="162" width="128" height="88"/>
-        <element name="Passenger" positionX="-110" positionY="-10" width="128" height="118"/>
+        <element name="Airport" positionX="-333" positionY="-99" width="128" height="103"/>
+        <element name="Location" positionX="-324" positionY="63" width="128" height="193"/>
+        <element name="LocationCategory" positionX="-344" positionY="320" width="128" height="103"/>
+        <element name="Passenger" positionX="-29" positionY="-10" width="128" height="118"/>
         <element name="SeviceCategory" positionX="-20" positionY="270" width="128" height="88"/>
     </elements>
 </model>

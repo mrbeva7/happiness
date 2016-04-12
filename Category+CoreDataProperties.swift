@@ -2,7 +2,7 @@
 //  Category+CoreDataProperties.swift
 //  Airport
 //
-//  Created by iosdev on 8.4.2016.
+//  Created by iosdev on 12.4.2016.
 //  Copyright © 2016 W4happiness. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
