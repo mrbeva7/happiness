@@ -8,11 +8,11 @@
     </entity>
     <entity name="Location" representedClassName="Location" syncable="YES">
         <attribute name="locationID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="locationLevel" optional="YES" syncable="YES"/>
+        <attribute name="locationLevel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="x" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="y" optional="YES" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="airport" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Airport" inverseName="airportLoc" inverseEntity="Airport" syncable="YES"/>
         <relationship name="locationCateLevel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationCategory" inverseName="locationLevel" inverseEntity="LocationCategory" syncable="YES"/>
         <relationship name="locationPas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Passenger" inverseName="passengerPos" inverseEntity="Passenger" syncable="YES"/>

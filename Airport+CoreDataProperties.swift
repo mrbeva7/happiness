@@ -15,7 +15,8 @@ import CoreData
 extension Airport {
 
     @NSManaged var airportID: NSNumber?
-    @NSManaged var name: String?
     @NSManaged var location: String?
+    @NSManaged var name: String?
+    @NSManaged var airportLoc: Location?
 
 }

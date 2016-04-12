@@ -15,14 +15,14 @@ import CoreData
 extension Location {
 
     @NSManaged var locationID: NSNumber?
+    @NSManaged var locationLevel: NSNumber?
     @NSManaged var name: String?
-    @NSManaged var x: NSNumber?
     @NSManaged var type: NSNumber?
-    @NSManaged var y: UNKNOWN_TYPE
-    @NSManaged var locationLevel: UNKNOWN_TYPE
-    @NSManaged var airportName: UNKNOWN_TYPE
-    @NSManaged var locationPas: NSSet?
-    @NSManaged var locationType: Category?
+    @NSManaged var x: NSNumber?
+    @NSManaged var y: NSNumber?
+    @NSManaged var airport: NSSet?
     @NSManaged var locationCateLevel: LocationCategory?
+    @NSManaged var locationPas: Passenger?
+    @NSManaged var locationType: Category?
 
 }
