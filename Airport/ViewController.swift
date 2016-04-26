@@ -7,13 +7,29 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class ViewController: UIViewController {
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let background = UIImage (named: "skybg.jpg")
+        let entireScreen = UIScreen.mainScreen().bounds
+        background?.drawInRect(entireScreen)
+        
+        //draw image
+        // let location = CGPointMake(10, 10)
+        // background?.drawAtPoint(location)
+        
+        
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
