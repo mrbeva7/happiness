@@ -11,6 +11,7 @@ import UIKit
 
 class CheckInViewController : UIViewController, UITextFieldDelegate {
 
+    //video starts here
     @IBOutlet var webView: UIWebView!
     
     override func viewDidAppear(animated: Bool) {
@@ -24,38 +25,41 @@ class CheckInViewController : UIViewController, UITextFieldDelegate {
     }
     
     
-    
+    //for input departure time
     @IBOutlet weak var departureTimeLabel: UILabel!
     
-    @IBOutlet weak var departureTimeTextField: UITextField!
-    
-    @IBAction func saveButton(sender: UIButton) {
-        
-        departureTimeLabel.text = "--:-- AM/PM"
-        
-    }
+//    @IBOutlet weak var departureTimeTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Handle the text field’s user input through delegate callbacks.
-        departureTimeTextField.delegate = self
+//        departureTimeTextField.delegate = self
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        // Hide the keyboard.
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        departureTimeLabel.text = textField.text
-    }
-
-    
-//    @IBAction func timePicker(sender: UIDatePicker) {
+//    func textFieldShouldReturn(textField: UITextField) -> Bool {
+//        // Hide the keyboard.
+//        textField.resignFirstResponder()
+//        return true
+//    }
+//    
+//    func textFieldDidEndEditing(textField: UITextField) {
+//        departureTimeLabel.text = textField.text
 //    }
     
+    
+    
+    func setTime(sender: UIDatePicker) {
+        let timeFormatter = NSDateFormatter()
+        timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        departureTimeLabel.text = timeFormatter.stringFromDate(sender.date)
+    }
+    
+    @IBAction func timePicker(sender: UIDatePicker) {
+        setTime(sender)
+    }
+    
+    @IBOutlet weak var button: UIButton!
     
     //Alert message: ask user to turn on the bluetooth.
     

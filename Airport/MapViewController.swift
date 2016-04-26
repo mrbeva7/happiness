@@ -1,18 +1,15 @@
 //
-//  ViewController.swift
+//  MapViewController.swift
 //  Airport
 //
-//  Created by RUBING MAO on 4/7/16.
+//  Created by RUBING MAO on 4/26/16.
 //  Copyright © 2016 RUBING MAO. All rights reserved.
 //
 
+import Foundation
 import UIKit
-import MediaPlayer
 
-class ViewController: UIViewController {
-
-    
-    
+class MapViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +26,4 @@ class ViewController: UIViewController {
         
     }
     
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
