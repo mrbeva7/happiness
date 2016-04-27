@@ -11,9 +11,7 @@ import UIKit
 
 class SecurityViewController : UIViewController {
     
-    
     @IBOutlet var webView: UIWebView!
-    
     
     override func viewDidAppear(animated: Bool) {
         

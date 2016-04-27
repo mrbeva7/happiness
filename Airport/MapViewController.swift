@@ -9,21 +9,21 @@
 import Foundation
 import UIKit
 
-class MapViewController : UIViewController {
+class MapViewController : UIViewController, UIScrollViewDelegate {
+    
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let background = UIImage (named: "skybg.jpg")
-        let entireScreen = UIScreen.mainScreen().bounds
-        background?.drawInRect(entireScreen)
-        
-        //draw image
-        // let location = CGPointMake(10, 10)
-        // background?.drawAtPoint(location)
-        
-        
-        
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 5.0
+    }
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return self.imageView
     }
     
 }
