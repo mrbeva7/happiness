@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		793239871CCE2AB2005A9D8A /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793239861CCE2AB2005A9D8A /* ServiceViewController.swift */; };
+		7963409E1CD0052400E3C567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7963409D1CD0052400E3C567 /* Main.storyboard */; };
+		79B50AB91CC96F19005A2CF9 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B50AB81CC96F19005A2CF9 /* SecurityViewController.swift */; };
+		79C2E69A1CCFB9B300B82DB3 /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C2E6991CCFB9B300B82DB3 /* QRCodeScannerViewController.swift */; };
+		79C2E69C1CCFBD2C00B82DB3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C2E69B1CCFBD2C00B82DB3 /* MapViewController.swift */; };
+		79E0AECC1CC95922007F1F98 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0AECB1CC95922007F1F98 /* CheckInViewController.swift */; };
 		79F47E001CB672B200D723C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F47DFF1CB672B200D723C4 /* AppDelegate.swift */; };
-		79F47E021CB672B200D723C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F47E011CB672B200D723C4 /* ViewController.swift */; };
-		79F47E051CB672B200D723C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F47E031CB672B200D723C4 /* Main.storyboard */; };
 		79F47E071CB672B200D723C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F47E061CB672B200D723C4 /* Assets.xcassets */; };
 		79F47E0A1CB672B200D723C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F47E081CB672B200D723C4 /* LaunchScreen.storyboard */; };
 		79F47E151CB672B200D723C4 /* AirportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F47E141CB672B200D723C4 /* AirportTests.swift */; };
@@ -26,10 +30,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		793239861CCE2AB2005A9D8A /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		7963409D1CD0052400E3C567 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		79B50AB81CC96F19005A2CF9 /* SecurityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
+		79C2E6991CCFB9B300B82DB3 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
+		79C2E69B1CCFBD2C00B82DB3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		79E0AECB1CC95922007F1F98 /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		79F47DFC1CB672B200D723C4 /* Airport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F47DFF1CB672B200D723C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79F47E011CB672B200D723C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		79F47E041CB672B200D723C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79F47E061CB672B200D723C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79F47E091CB672B200D723C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79F47E0B1CB672B200D723C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,9 +85,13 @@
 		79F47DFE1CB672B200D723C4 /* Airport */ = {
 			isa = PBXGroup;
 			children = (
+				7963409D1CD0052400E3C567 /* Main.storyboard */,
 				79F47DFF1CB672B200D723C4 /* AppDelegate.swift */,
-				79F47E011CB672B200D723C4 /* ViewController.swift */,
-				79F47E031CB672B200D723C4 /* Main.storyboard */,
+				79C2E69B1CCFBD2C00B82DB3 /* MapViewController.swift */,
+				79C2E6991CCFB9B300B82DB3 /* QRCodeScannerViewController.swift */,
+				793239861CCE2AB2005A9D8A /* ServiceViewController.swift */,
+				79B50AB81CC96F19005A2CF9 /* SecurityViewController.swift */,
+				79E0AECB1CC95922007F1F98 /* CheckInViewController.swift */,
 				79F47E061CB672B200D723C4 /* Assets.xcassets */,
 				79F47E081CB672B200D723C4 /* LaunchScreen.storyboard */,
 				79F47E0B1CB672B200D723C4 /* Info.plist */,
@@ -181,7 +193,7 @@
 			files = (
 				79F47E0A1CB672B200D723C4 /* LaunchScreen.storyboard in Resources */,
 				79F47E071CB672B200D723C4 /* Assets.xcassets in Resources */,
-				79F47E051CB672B200D723C4 /* Main.storyboard in Resources */,
+				7963409E1CD0052400E3C567 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79F47E021CB672B200D723C4 /* ViewController.swift in Sources */,
+				79E0AECC1CC95922007F1F98 /* CheckInViewController.swift in Sources */,
+				79B50AB91CC96F19005A2CF9 /* SecurityViewController.swift in Sources */,
 				79F47E001CB672B200D723C4 /* AppDelegate.swift in Sources */,
+				793239871CCE2AB2005A9D8A /* ServiceViewController.swift in Sources */,
+				79C2E69A1CCFB9B300B82DB3 /* QRCodeScannerViewController.swift in Sources */,
+				79C2E69C1CCFBD2C00B82DB3 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,14 +239,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		79F47E031CB672B200D723C4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79F47E041CB672B200D723C4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		79F47E081CB672B200D723C4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -392,6 +400,7 @@
 				79F47E1B1CB672B200D723C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79F47E1C1CB672B200D723C4 /* Build configuration list for PBXNativeTarget "AirportTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +409,7 @@
 				79F47E1E1CB672B200D723C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

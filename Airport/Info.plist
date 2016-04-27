@@ -43,5 +43,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>*AskUserToTurnOnTheBluetooth.</key>
+	<string>Please make sure your bluetooth is on.</string>
 </dict>
 </plist>

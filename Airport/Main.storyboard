@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SDZ-fz-5FP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Service View Controller-->
+        <scene sceneID="Nfk-Di-MYM">
+            <objects>
+                <viewController id="l5J-B8-zFA" customClass="ServiceViewController" customModule="Airport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nlf-jX-SiV"/>
+                        <viewControllerLayoutGuide type="bottom" id="p1N-Dp-fe1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2yu-zH-x6a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Services" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usg-w2-2dB">
+                                <rect key="frame" x="20" y="20" width="280" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time before boarding:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh6-8k-MBn">
+                                <rect key="frame" x="20" y="58" width="170" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1:02:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiV-aE-oXy">
+                                <rect key="frame" x="190" y="58" width="110" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pAx-b5-zAe" appends="YES" id="hd2-SH-7ab"/>
+                            <outletCollection property="gestureRecognizers" destination="tdQ-QR-u12" appends="YES" id="QrB-bt-6r2"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tgw-Xq-GPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="pAx-b5-zAe">
+                    <connections>
+                        <segue destination="pdc-Fm-Hpw" kind="show" id="EzA-Hl-GOJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="tdQ-QR-u12">
+                    <connections>
+                        <segue destination="gLX-eD-JBK" kind="show" id="Gja-k8-27E"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="451" y="368"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Jxv-2k-G3i">
+            <objects>
+                <viewController id="cYa-Dj-3Xw" customClass="MapViewController" customModule="Airport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KnS-xO-KPF"/>
+                        <viewControllerLayoutGuide type="bottom" id="kP9-6K-ksz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cf2-0N-t0o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wd8-qP-AVn">
+                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airportMap" translatesAutoresizingMaskIntoConstraints="NO" id="zXO-e6-CzS">
+                                        <rect key="frame" x="8" y="1" width="304" height="483"/>
+                                    </imageView>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="cYa-Dj-3Xw" id="XOu-CH-gUW"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMz-ip-Xho">
+                                <rect key="frame" x="20" y="28" width="40" height="40"/>
+                                <gestureRecognizers/>
+                                <state key="normal" backgroundImage="backButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dZC-oV-CUF" appends="YES" id="hxf-cL-KLi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="zXO-e6-CzS" id="IdD-XM-wFI"/>
+                        <outlet property="scrollView" destination="wd8-qP-AVn" id="Eks-XT-Vw2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vN4-8v-yp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dZC-oV-CUF">
+                    <connections>
+                        <segue destination="gLX-eD-JBK" kind="show" id="dnK-RN-P7e"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-131" y="-388"/>
+        </scene>
+        <!--Check In View Controller-->
+        <scene sceneID="YIJ-4b-GXa">
+            <objects>
+                <viewController id="SDZ-fz-5FP" customClass="CheckInViewController" customModule="Airport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HTe-B0-bJy"/>
+                        <viewControllerLayoutGuide type="bottom" id="ugz-c5-tF2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DmW-v5-mB7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check-In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYD-00-pLy">
+                                <rect key="frame" x="20" y="20" width="280" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfz-US-3Hu">
+                                <rect key="frame" x="20" y="58" width="280" height="150"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Example 10: 10 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kus-QS-hUd">
+                                <rect key="frame" x="150" y="217" width="150" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjI-jZ-0UG">
+                                <rect key="frame" x="90" y="408" width="140" height="140"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <state key="normal" backgroundImage="QR"/>
+                                <connections>
+                                    <segue destination="9Rj-h2-D1O" kind="show" id="mY7-Rh-8yh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Departure time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4r-YR-GKk">
+                                <rect key="frame" x="20" y="216" width="132" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hXp-R5-2W4">
+                                <rect key="frame" x="20" y="257" width="280" height="140"/>
+                                <date key="date" timeIntervalSinceReferenceDate="483395928.34779698">
+                                    <!--2016-04-26 20:38:48 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="timePicker:" destination="SDZ-fz-5FP" eventType="valueChanged" id="fhW-48-vGZ"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KtY-Ll-HRp" appends="YES" id="fLl-VN-Gw5"/>
+                            <outletCollection property="gestureRecognizers" destination="b8H-1i-Yr3" appends="YES" id="OAd-Uj-OmR"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="departureTimeLabel" destination="Kus-QS-hUd" id="ckx-4z-hXl"/>
+                        <outlet property="webView" destination="cfz-US-3Hu" id="2pW-BD-ksT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQs-2c-wZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="KtY-Ll-HRp">
+                    <connections>
+                        <segue destination="gLX-eD-JBK" kind="show" id="NLC-bE-Ohy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="b8H-1i-Yr3"/>
+            </objects>
+            <point key="canvasLocation" x="-646" y="368"/>
+        </scene>
+        <!--Code Scanner View Controller-->
+        <scene sceneID="GVz-Gq-IZI">
+            <objects>
+                <viewController id="9Rj-h2-D1O" customClass="QRCodeScannerViewController" customModule="Airport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D9o-24-xB9"/>
+                        <viewControllerLayoutGuide type="bottom" id="SY0-6m-HXg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ILX-VQ-LLq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QR result: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4X-y3-kN6">
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99587684869766235" green="0.99227434396743774" blue="0.99199777841567993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gX-kU-msq">
+                                <rect key="frame" x="20" y="28" width="40" height="40"/>
+                                <gestureRecognizers/>
+                                <state key="normal" backgroundImage="backButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RAJ-lX-2F2" appends="YES" id="yEM-ns-Wpm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="QRcodeResult" destination="g4X-y3-kN6" id="Q9c-lN-bUH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9S-mp-Dud" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="RAJ-lX-2F2">
+                    <connections>
+                        <segue destination="SDZ-fz-5FP" kind="show" id="yko-f6-dT7"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-646" y="-388"/>
+        </scene>
+        <!--Security View Controller-->
+        <scene sceneID="cCc-tZ-scI">
+            <objects>
+                <viewController id="gLX-eD-JBK" customClass="SecurityViewController" customModule="Airport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v9s-fk-D3A"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Cm-Ub-9Qc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eXt-da-leK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Security Check" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogv-iw-Ef8">
+                                <rect key="frame" x="20" y="21" width="280" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhR-UD-cAy">
+                                <rect key="frame" x="20" y="59" width="280" height="150"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airportMap" translatesAutoresizingMaskIntoConstraints="NO" id="KvA-go-9Ll">
+                                <rect key="frame" x="20" y="348" width="280" height="200"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estimated time to wait:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-xf-nJw">
+                                <rect key="frame" x="20" y="217" width="280" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.99587684869766235" green="0.99227434396743774" blue="0.99199777841567993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terminal 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTG-cE-lu3">
+                                <rect key="frame" x="20" y="244" width="140" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.99587684869766235" green="0.99227434396743774" blue="0.99199777841567993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terminal 2 B:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKG-0B-adH">
+                                <rect key="frame" x="20" y="294" width="140" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.99587684869766235" green="0.99227434396743774" blue="0.99199777841567993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terminal 2 A:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBM-Sl-OaS">
+                                <rect key="frame" x="20" y="270" width="140" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.99587684869766235" green="0.99227434396743774" blue="0.99199777841567993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terminal 2 C:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84c-WW-HAs">
+                                <rect key="frame" x="20" y="319" width="140" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.99587684869766235" green="0.99227434396743774" blue="0.99199777841567993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpo-fU-Zcg">
+                                <rect key="frame" x="200" y="248" width="100" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzw-SP-En9">
+                                <rect key="frame" x="200" y="273" width="100" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlu-Ar-I2Y">
+                                <rect key="frame" x="200" y="298" width="100" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0y-r2-miO">
+                                <rect key="frame" x="200" y="323" width="100" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xIM-uw-qb9" appends="YES" id="jPE-1q-3w8"/>
+                            <outletCollection property="gestureRecognizers" destination="1hU-c1-47W" appends="YES" id="Ge4-tR-za4"/>
+                            <outletCollection property="gestureRecognizers" destination="2e2-Gl-Fcc" appends="YES" id="geG-AW-2BT"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="OhR-UD-cAy" id="AeI-h5-euc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a27-tN-3Mz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="xIM-uw-qb9">
+                    <connections>
+                        <segue destination="l5J-B8-zFA" kind="show" id="1ka-sm-Cis"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="1hU-c1-47W">
+                    <connections>
+                        <segue destination="SDZ-fz-5FP" kind="show" id="0D0-3c-Wya"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="2e2-Gl-Fcc">
+                    <connections>
+                        <segue destination="cYa-Dj-3Xw" kind="show" id="k9p-Aj-RPG"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-103" y="368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="48T-ak-sqC">
+            <objects>
+                <viewController id="pdc-Fm-Hpw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vkn-9Y-qHK"/>
+                        <viewControllerLayoutGuide type="bottom" id="KGM-Hf-Us2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hoh-n1-7qY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Boarding" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fot-vp-K8a">
+                                <rect key="frame" x="20" y="20" width="280" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wdy-nH-x5m" appends="YES" id="Qb0-Hh-E7n"/>
+                            <outletCollection property="gestureRecognizers" destination="VT3-JJ-ZQH" appends="YES" id="xhE-QU-gqY"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hey-EC-KRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="wdy-nH-x5m">
+                    <connections>
+                        <segue destination="boZ-2X-Jpw" kind="show" id="bRF-DP-4gk"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="VT3-JJ-ZQH">
+                    <connections>
+                        <segue destination="l5J-B8-zFA" kind="show" id="gZU-tF-eIp"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1020" y="368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CHU-ci-QtR">
+            <objects>
+                <viewController id="boZ-2X-Jpw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jir-Ww-SuH"/>
+                        <viewControllerLayoutGuide type="bottom" id="bhw-ei-8pt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z0D-cB-r1Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goodbye, " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss7-zQ-x5y">
+                                <rect key="frame" x="20" y="245" width="280" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have a pleasant flight!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G42-Oa-tpG">
+                                <rect key="frame" x="20" y="283" width="280" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blurrysky" translatesAutoresizingMaskIntoConstraints="NO" id="YVg-Xn-w9Z">
+                                <rect key="frame" x="0.0" y="283" width="320" height="160"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hjZ-gq-V0C" appends="YES" id="pcm-i9-xg1"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8h3-o6-RtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="hjZ-gq-V0C">
+                    <connections>
+                        <segue destination="pdc-Fm-Hpw" kind="show" id="fz7-Ri-rEl"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1569" y="368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="QR" width="753" height="753"/>
+        <image name="airportMap" width="295" height="207"/>
+        <image name="backButton" width="512" height="512"/>
+        <image name="blurrysky" width="960" height="270"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1ka-sm-Cis"/>
+        <segue reference="dnK-RN-P7e"/>
+        <segue reference="yko-f6-dT7"/>
+        <segue reference="fz7-Ri-rEl"/>
+    </inferredMetricsTieBreakers>
+</document>
