@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+//Reference(Adding a core data stack after creating the project): http://purelywebdesign.co.uk/tutorial/add-coredata-to-an-exiting-swift-2-0-project/
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
