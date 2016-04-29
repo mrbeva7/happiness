@@ -8,6 +8,67 @@
 
 /* Begin PBXBuildFile section */
 		6A0D81501CD1A72E00901DAF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D814E1CD1A72E00901DAF /* Model.xcdatamodeld */; };
+		6A316FA71CD3CA990093FE0C /* Passenger+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316F9B1CD3CA990093FE0C /* Passenger+CoreDataProperties.swift */; };
+		6A316FA81CD3CA990093FE0C /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316F9C1CD3CA990093FE0C /* Passenger.swift */; };
+		6A316FA91CD3CA990093FE0C /* LocationCate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316F9D1CD3CA990093FE0C /* LocationCate+CoreDataProperties.swift */; };
+		6A316FAA1CD3CA990093FE0C /* LocationCate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316F9E1CD3CA990093FE0C /* LocationCate.swift */; };
+		6A316FAB1CD3CA990093FE0C /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316F9F1CD3CA990093FE0C /* Location+CoreDataProperties.swift */; };
+		6A316FAC1CD3CA990093FE0C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316FA01CD3CA990093FE0C /* Location.swift */; };
+		6A316FAD1CD3CA990093FE0C /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316FA11CD3CA990093FE0C /* Category+CoreDataProperties.swift */; };
+		6A316FAE1CD3CA990093FE0C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316FA21CD3CA990093FE0C /* Category.swift */; };
+		6A316FAF1CD3CA990093FE0C /* Beacon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316FA31CD3CA990093FE0C /* Beacon+CoreDataProperties.swift */; };
+		6A316FB01CD3CA990093FE0C /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316FA41CD3CA990093FE0C /* Beacon.swift */; };
+		6A316FB31CD3CAC90093FE0C /* Airport+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316FB11CD3CAC90093FE0C /* Airport+CoreDataProperties.swift */; };
+		6A316FB41CD3CAC90093FE0C /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A316FB21CD3CAC90093FE0C /* Airport.swift */; };
+		6A3170791CD3CB8E0093FE0C /* libEstimoteIndoorSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A316FCA1CD3CB8E0093FE0C /* libEstimoteIndoorSDK.a */; };
+		6A31707A1CD3CB8E0093FE0C /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FCC1CD3CB8E0093FE0C /* avatar.png */; };
+		6A31707B1CD3CB8E0093FE0C /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FCD1CD3CB8E0093FE0C /* avatar@2x.png */; };
+		6A31707C1CD3CB8E0093FE0C /* avatar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FCE1CD3CB8E0093FE0C /* avatar@3x.png */; };
+		6A31707D1CD3CB8E0093FE0C /* avatar_noarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FCF1CD3CB8E0093FE0C /* avatar_noarrow.png */; };
+		6A31707E1CD3CB8E0093FE0C /* avatar_noarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FD01CD3CB8E0093FE0C /* avatar_noarrow@2x.png */; };
+		6A31707F1CD3CB8E0093FE0C /* avatar_noarrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FD11CD3CB8E0093FE0C /* avatar_noarrow@3x.png */; };
+		6A3170801CD3CB8E0093FE0C /* beaconBeetrootSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FD21CD3CB8E0093FE0C /* beaconBeetrootSmall.png */; };
+		6A3170811CD3CB8E0093FE0C /* beaconBeetrootSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FD31CD3CB8E0093FE0C /* beaconBeetrootSmall@2x.png */; };
+		6A3170821CD3CB8E0093FE0C /* beaconBeetrootSmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FD41CD3CB8E0093FE0C /* beaconBeetrootSmall@3x.png */; };
+		6A3170831CD3CB8E0093FE0C /* beaconBlackSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FD51CD3CB8E0093FE0C /* beaconBlackSmall.png */; };
+		6A3170841CD3CB8E0093FE0C /* beaconBlackSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FD61CD3CB8E0093FE0C /* beaconBlackSmall@2x.png */; };
+		6A3170851CD3CB8E0093FE0C /* beaconBlackSmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FD71CD3CB8E0093FE0C /* beaconBlackSmall@3x.png */; };
+		6A3170861CD3CB8E0093FE0C /* beaconBlueberrySmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FD81CD3CB8E0093FE0C /* beaconBlueberrySmall.png */; };
+		6A3170871CD3CB8E0093FE0C /* beaconBlueberrySmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FD91CD3CB8E0093FE0C /* beaconBlueberrySmall@2x.png */; };
+		6A3170881CD3CB8E0093FE0C /* beaconBlueberrySmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FDA1CD3CB8E0093FE0C /* beaconBlueberrySmall@3x.png */; };
+		6A3170891CD3CB8E0093FE0C /* beaconCandySmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FDB1CD3CB8E0093FE0C /* beaconCandySmall.png */; };
+		6A31708A1CD3CB8E0093FE0C /* beaconCandySmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FDC1CD3CB8E0093FE0C /* beaconCandySmall@2x.png */; };
+		6A31708B1CD3CB8E0093FE0C /* beaconCandySmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FDD1CD3CB8E0093FE0C /* beaconCandySmall@3x.png */; };
+		6A31708C1CD3CB8E0093FE0C /* beaconGreySmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FDE1CD3CB8E0093FE0C /* beaconGreySmall.png */; };
+		6A31708D1CD3CB8E0093FE0C /* beaconGreySmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FDF1CD3CB8E0093FE0C /* beaconGreySmall@2x.png */; };
+		6A31708E1CD3CB8E0093FE0C /* beaconGreySmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FE01CD3CB8E0093FE0C /* beaconGreySmall@3x.png */; };
+		6A31708F1CD3CB8E0093FE0C /* beaconIcySmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FE11CD3CB8E0093FE0C /* beaconIcySmall.png */; };
+		6A3170901CD3CB8E0093FE0C /* beaconIcySmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FE21CD3CB8E0093FE0C /* beaconIcySmall@2x.png */; };
+		6A3170911CD3CB8E0093FE0C /* beaconIcySmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FE31CD3CB8E0093FE0C /* beaconIcySmall@3x.png */; };
+		6A3170921CD3CB8E0093FE0C /* beaconLemonSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FE41CD3CB8E0093FE0C /* beaconLemonSmall.png */; };
+		6A3170931CD3CB8E0093FE0C /* beaconLemonSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FE51CD3CB8E0093FE0C /* beaconLemonSmall@2x.png */; };
+		6A3170941CD3CB8E0093FE0C /* beaconLemonSmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FE61CD3CB8E0093FE0C /* beaconLemonSmall@3x.png */; };
+		6A3170951CD3CB8E0093FE0C /* beaconMintSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FE71CD3CB8E0093FE0C /* beaconMintSmall.png */; };
+		6A3170961CD3CB8E0093FE0C /* beaconMintSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FE81CD3CB8E0093FE0C /* beaconMintSmall@2x.png */; };
+		6A3170971CD3CB8E0093FE0C /* beaconMintSmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FE91CD3CB8E0093FE0C /* beaconMintSmall@3x.png */; };
+		6A3170981CD3CB8E0093FE0C /* beaconTransparentSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FEA1CD3CB8E0093FE0C /* beaconTransparentSmall.png */; };
+		6A3170991CD3CB8E0093FE0C /* beaconTransparentSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FEB1CD3CB8E0093FE0C /* beaconTransparentSmall@2x.png */; };
+		6A31709A1CD3CB8E0093FE0C /* beaconTransparentSmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FEC1CD3CB8E0093FE0C /* beaconTransparentSmall@3x.png */; };
+		6A31709B1CD3CB8E0093FE0C /* beaconWhiteSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FED1CD3CB8E0093FE0C /* beaconWhiteSmall.png */; };
+		6A31709C1CD3CB8E0093FE0C /* beaconWhiteSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FEE1CD3CB8E0093FE0C /* beaconWhiteSmall@2x.png */; };
+		6A31709D1CD3CB8E0093FE0C /* beaconWhiteSmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FEF1CD3CB8E0093FE0C /* beaconWhiteSmall@3x.png */; };
+		6A31709E1CD3CB8E0093FE0C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FF01CD3CB8E0093FE0C /* LICENSE */; };
+		6A31709F1CD3CB8E0093FE0C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6A316FF11CD3CB8E0093FE0C /* README.md */; };
+		6A3170A01CD3CB8E0093FE0C /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A316FF41CD3CB8E0093FE0C /* EstimoteSDK.framework */; };
+		6A3170A11CD3CB8E0093FE0C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6A316FF51CD3CB8E0093FE0C /* LICENSE */; };
+		6A3170A21CD3CB8E0093FE0C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6A316FF61CD3CB8E0093FE0C /* README.md */; };
+		6A3170A31CD3CB8E0093FE0C /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = 6A31706C1CD3CB8E0093FE0C /* Manifest.lock */; };
+		6A3170A41CD3CB8E0093FE0C /* Pods-acknowledgements.markdown in Sources */ = {isa = PBXBuildFile; fileRef = 6A3170721CD3CB8E0093FE0C /* Pods-acknowledgements.markdown */; };
+		6A3170A51CD3CB8E0093FE0C /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A3170731CD3CB8E0093FE0C /* Pods-acknowledgements.plist */; };
+		6A3170A71CD3CB8E0093FE0C /* Pods-frameworks.sh in Resources */ = {isa = PBXBuildFile; fileRef = 6A3170751CD3CB8E0093FE0C /* Pods-frameworks.sh */; };
+		6A3170A81CD3CB8E0093FE0C /* Pods-resources.sh in Resources */ = {isa = PBXBuildFile; fileRef = 6A3170761CD3CB8E0093FE0C /* Pods-resources.sh */; };
+		6A3170A91CD3CB8E0093FE0C /* Pods.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6A3170771CD3CB8E0093FE0C /* Pods.debug.xcconfig */; };
+		6A3170AA1CD3CB8E0093FE0C /* Pods.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6A3170781CD3CB8E0093FE0C /* Pods.release.xcconfig */; };
 		793239871CCE2AB2005A9D8A /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793239861CCE2AB2005A9D8A /* ServiceViewController.swift */; };
 		7963409E1CD0052400E3C567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7963409D1CD0052400E3C567 /* Main.storyboard */; };
 		79B50AB91CC96F19005A2CF9 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B50AB81CC96F19005A2CF9 /* SecurityViewController.swift */; };
@@ -21,6 +82,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6A3170B11CD3CC000093FE0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A31706D1CD3CB8E0093FE0C /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BFDCEDF11CC5329E8A2F6885DA7FBE21;
+			remoteInfo = Pods;
+		};
 		79F47E111CB672B200D723C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 79F47DF41CB672B200D723C4 /* Project object */;
@@ -35,6 +103,194 @@
 		50E38A7168F42C680E8410FA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6A0D814F1CD1A72E00901DAF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6A0D818C1CD1F86100901DAF /* Airport-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Airport-Bridging-Header.h"; sourceTree = "<group>"; };
+		6A316F9B1CD3CA990093FE0C /* Passenger+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Passenger+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6A316F9C1CD3CA990093FE0C /* Passenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
+		6A316F9D1CD3CA990093FE0C /* LocationCate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationCate+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6A316F9E1CD3CA990093FE0C /* LocationCate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCate.swift; sourceTree = "<group>"; };
+		6A316F9F1CD3CA990093FE0C /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6A316FA01CD3CA990093FE0C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		6A316FA11CD3CA990093FE0C /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6A316FA21CD3CA990093FE0C /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		6A316FA31CD3CA990093FE0C /* Beacon+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Beacon+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6A316FA41CD3CA990093FE0C /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		6A316FB11CD3CAC90093FE0C /* Airport+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Airport+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6A316FB21CD3CAC90093FE0C /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		6A316FB91CD3CB8E0093FE0C /* EILIndoorLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILIndoorLocationManager.h; sourceTree = "<group>"; };
+		6A316FBA1CD3CB8E0093FE0C /* EILIndoorLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILIndoorLocationView.h; sourceTree = "<group>"; };
+		6A316FBB1CD3CB8E0093FE0C /* EILIndoorSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILIndoorSDK.h; sourceTree = "<group>"; };
+		6A316FBC1CD3CB8E0093FE0C /* EILLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILLocation.h; sourceTree = "<group>"; };
+		6A316FBD1CD3CB8E0093FE0C /* EILLocationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILLocationBuilder.h; sourceTree = "<group>"; };
+		6A316FBE1CD3CB8E0093FE0C /* EILLocationLinearObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILLocationLinearObject.h; sourceTree = "<group>"; };
+		6A316FBF1CD3CB8E0093FE0C /* EILOrientedLineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILOrientedLineSegment.h; sourceTree = "<group>"; };
+		6A316FC01CD3CB8E0093FE0C /* EILOrientedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILOrientedPoint.h; sourceTree = "<group>"; };
+		6A316FC11CD3CB8E0093FE0C /* EILPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILPoint.h; sourceTree = "<group>"; };
+		6A316FC21CD3CB8E0093FE0C /* EILPositionedBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILPositionedBeacon.h; sourceTree = "<group>"; };
+		6A316FC31CD3CB8E0093FE0C /* EILPositionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILPositionView.h; sourceTree = "<group>"; };
+		6A316FC41CD3CB8E0093FE0C /* EILRequestAddLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestAddLocation.h; sourceTree = "<group>"; };
+		6A316FC51CD3CB8E0093FE0C /* EILRequestFetchLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestFetchLocation.h; sourceTree = "<group>"; };
+		6A316FC61CD3CB8E0093FE0C /* EILRequestFetchLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestFetchLocations.h; sourceTree = "<group>"; };
+		6A316FC71CD3CB8E0093FE0C /* EILRequestFetchPublicLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestFetchPublicLocations.h; sourceTree = "<group>"; };
+		6A316FC81CD3CB8E0093FE0C /* EILRequestModifyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestModifyLocation.h; sourceTree = "<group>"; };
+		6A316FC91CD3CB8E0093FE0C /* EILRequestRemoveLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestRemoveLocation.h; sourceTree = "<group>"; };
+		6A316FCA1CD3CB8E0093FE0C /* libEstimoteIndoorSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteIndoorSDK.a; sourceTree = "<group>"; };
+		6A316FCC1CD3CB8E0093FE0C /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		6A316FCD1CD3CB8E0093FE0C /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
+		6A316FCE1CD3CB8E0093FE0C /* avatar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@3x.png"; sourceTree = "<group>"; };
+		6A316FCF1CD3CB8E0093FE0C /* avatar_noarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_noarrow.png; sourceTree = "<group>"; };
+		6A316FD01CD3CB8E0093FE0C /* avatar_noarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar_noarrow@2x.png"; sourceTree = "<group>"; };
+		6A316FD11CD3CB8E0093FE0C /* avatar_noarrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar_noarrow@3x.png"; sourceTree = "<group>"; };
+		6A316FD21CD3CB8E0093FE0C /* beaconBeetrootSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconBeetrootSmall.png; sourceTree = "<group>"; };
+		6A316FD31CD3CB8E0093FE0C /* beaconBeetrootSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconBeetrootSmall@2x.png"; sourceTree = "<group>"; };
+		6A316FD41CD3CB8E0093FE0C /* beaconBeetrootSmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconBeetrootSmall@3x.png"; sourceTree = "<group>"; };
+		6A316FD51CD3CB8E0093FE0C /* beaconBlackSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconBlackSmall.png; sourceTree = "<group>"; };
+		6A316FD61CD3CB8E0093FE0C /* beaconBlackSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconBlackSmall@2x.png"; sourceTree = "<group>"; };
+		6A316FD71CD3CB8E0093FE0C /* beaconBlackSmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconBlackSmall@3x.png"; sourceTree = "<group>"; };
+		6A316FD81CD3CB8E0093FE0C /* beaconBlueberrySmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconBlueberrySmall.png; sourceTree = "<group>"; };
+		6A316FD91CD3CB8E0093FE0C /* beaconBlueberrySmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconBlueberrySmall@2x.png"; sourceTree = "<group>"; };
+		6A316FDA1CD3CB8E0093FE0C /* beaconBlueberrySmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconBlueberrySmall@3x.png"; sourceTree = "<group>"; };
+		6A316FDB1CD3CB8E0093FE0C /* beaconCandySmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconCandySmall.png; sourceTree = "<group>"; };
+		6A316FDC1CD3CB8E0093FE0C /* beaconCandySmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconCandySmall@2x.png"; sourceTree = "<group>"; };
+		6A316FDD1CD3CB8E0093FE0C /* beaconCandySmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconCandySmall@3x.png"; sourceTree = "<group>"; };
+		6A316FDE1CD3CB8E0093FE0C /* beaconGreySmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconGreySmall.png; sourceTree = "<group>"; };
+		6A316FDF1CD3CB8E0093FE0C /* beaconGreySmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconGreySmall@2x.png"; sourceTree = "<group>"; };
+		6A316FE01CD3CB8E0093FE0C /* beaconGreySmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconGreySmall@3x.png"; sourceTree = "<group>"; };
+		6A316FE11CD3CB8E0093FE0C /* beaconIcySmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconIcySmall.png; sourceTree = "<group>"; };
+		6A316FE21CD3CB8E0093FE0C /* beaconIcySmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconIcySmall@2x.png"; sourceTree = "<group>"; };
+		6A316FE31CD3CB8E0093FE0C /* beaconIcySmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconIcySmall@3x.png"; sourceTree = "<group>"; };
+		6A316FE41CD3CB8E0093FE0C /* beaconLemonSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconLemonSmall.png; sourceTree = "<group>"; };
+		6A316FE51CD3CB8E0093FE0C /* beaconLemonSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconLemonSmall@2x.png"; sourceTree = "<group>"; };
+		6A316FE61CD3CB8E0093FE0C /* beaconLemonSmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconLemonSmall@3x.png"; sourceTree = "<group>"; };
+		6A316FE71CD3CB8E0093FE0C /* beaconMintSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconMintSmall.png; sourceTree = "<group>"; };
+		6A316FE81CD3CB8E0093FE0C /* beaconMintSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconMintSmall@2x.png"; sourceTree = "<group>"; };
+		6A316FE91CD3CB8E0093FE0C /* beaconMintSmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconMintSmall@3x.png"; sourceTree = "<group>"; };
+		6A316FEA1CD3CB8E0093FE0C /* beaconTransparentSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconTransparentSmall.png; sourceTree = "<group>"; };
+		6A316FEB1CD3CB8E0093FE0C /* beaconTransparentSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconTransparentSmall@2x.png"; sourceTree = "<group>"; };
+		6A316FEC1CD3CB8E0093FE0C /* beaconTransparentSmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconTransparentSmall@3x.png"; sourceTree = "<group>"; };
+		6A316FED1CD3CB8E0093FE0C /* beaconWhiteSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaconWhiteSmall.png; sourceTree = "<group>"; };
+		6A316FEE1CD3CB8E0093FE0C /* beaconWhiteSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconWhiteSmall@2x.png"; sourceTree = "<group>"; };
+		6A316FEF1CD3CB8E0093FE0C /* beaconWhiteSmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaconWhiteSmall@3x.png"; sourceTree = "<group>"; };
+		6A316FF01CD3CB8E0093FE0C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6A316FF11CD3CB8E0093FE0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6A316FF41CD3CB8E0093FE0C /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
+		6A316FF51CD3CB8E0093FE0C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6A316FF61CD3CB8E0093FE0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6A316FFA1CD3CB8E0093FE0C /* EILIndoorLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILIndoorLocationManager.h; sourceTree = "<group>"; };
+		6A316FFB1CD3CB8E0093FE0C /* EILIndoorLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILIndoorLocationView.h; sourceTree = "<group>"; };
+		6A316FFC1CD3CB8E0093FE0C /* EILIndoorSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILIndoorSDK.h; sourceTree = "<group>"; };
+		6A316FFD1CD3CB8E0093FE0C /* EILLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILLocation.h; sourceTree = "<group>"; };
+		6A316FFE1CD3CB8E0093FE0C /* EILLocationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILLocationBuilder.h; sourceTree = "<group>"; };
+		6A316FFF1CD3CB8E0093FE0C /* EILLocationLinearObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILLocationLinearObject.h; sourceTree = "<group>"; };
+		6A3170001CD3CB8E0093FE0C /* EILOrientedLineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILOrientedLineSegment.h; sourceTree = "<group>"; };
+		6A3170011CD3CB8E0093FE0C /* EILOrientedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILOrientedPoint.h; sourceTree = "<group>"; };
+		6A3170021CD3CB8E0093FE0C /* EILPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILPoint.h; sourceTree = "<group>"; };
+		6A3170031CD3CB8E0093FE0C /* EILPositionedBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILPositionedBeacon.h; sourceTree = "<group>"; };
+		6A3170041CD3CB8E0093FE0C /* EILPositionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILPositionView.h; sourceTree = "<group>"; };
+		6A3170051CD3CB8E0093FE0C /* EILRequestAddLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestAddLocation.h; sourceTree = "<group>"; };
+		6A3170061CD3CB8E0093FE0C /* EILRequestFetchLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestFetchLocation.h; sourceTree = "<group>"; };
+		6A3170071CD3CB8E0093FE0C /* EILRequestFetchLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestFetchLocations.h; sourceTree = "<group>"; };
+		6A3170081CD3CB8E0093FE0C /* EILRequestFetchPublicLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestFetchPublicLocations.h; sourceTree = "<group>"; };
+		6A3170091CD3CB8E0093FE0C /* EILRequestModifyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestModifyLocation.h; sourceTree = "<group>"; };
+		6A31700A1CD3CB8E0093FE0C /* EILRequestRemoveLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestRemoveLocation.h; sourceTree = "<group>"; };
+		6A31700D1CD3CB8E0093FE0C /* EILIndoorLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILIndoorLocationManager.h; sourceTree = "<group>"; };
+		6A31700E1CD3CB8E0093FE0C /* EILIndoorLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILIndoorLocationView.h; sourceTree = "<group>"; };
+		6A31700F1CD3CB8E0093FE0C /* EILIndoorSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILIndoorSDK.h; sourceTree = "<group>"; };
+		6A3170101CD3CB8E0093FE0C /* EILLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILLocation.h; sourceTree = "<group>"; };
+		6A3170111CD3CB8E0093FE0C /* EILLocationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILLocationBuilder.h; sourceTree = "<group>"; };
+		6A3170121CD3CB8E0093FE0C /* EILLocationLinearObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILLocationLinearObject.h; sourceTree = "<group>"; };
+		6A3170131CD3CB8E0093FE0C /* EILOrientedLineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILOrientedLineSegment.h; sourceTree = "<group>"; };
+		6A3170141CD3CB8E0093FE0C /* EILOrientedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILOrientedPoint.h; sourceTree = "<group>"; };
+		6A3170151CD3CB8E0093FE0C /* EILPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILPoint.h; sourceTree = "<group>"; };
+		6A3170161CD3CB8E0093FE0C /* EILPositionedBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILPositionedBeacon.h; sourceTree = "<group>"; };
+		6A3170171CD3CB8E0093FE0C /* EILPositionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILPositionView.h; sourceTree = "<group>"; };
+		6A3170181CD3CB8E0093FE0C /* EILRequestAddLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestAddLocation.h; sourceTree = "<group>"; };
+		6A3170191CD3CB8E0093FE0C /* EILRequestFetchLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestFetchLocation.h; sourceTree = "<group>"; };
+		6A31701A1CD3CB8E0093FE0C /* EILRequestFetchLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestFetchLocations.h; sourceTree = "<group>"; };
+		6A31701B1CD3CB8E0093FE0C /* EILRequestFetchPublicLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestFetchPublicLocations.h; sourceTree = "<group>"; };
+		6A31701C1CD3CB8E0093FE0C /* EILRequestModifyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestModifyLocation.h; sourceTree = "<group>"; };
+		6A31701D1CD3CB8E0093FE0C /* EILRequestRemoveLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EILRequestRemoveLocation.h; sourceTree = "<group>"; };
+		6A3170201CD3CB8E0093FE0C /* ESTBeaconBaseVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconBaseVO.h; sourceTree = "<group>"; };
+		6A3170211CD3CB8E0093FE0C /* ESTBeaconConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconConnection.h; sourceTree = "<group>"; };
+		6A3170221CD3CB8E0093FE0C /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		6A3170231CD3CB8E0093FE0C /* ESTBeaconFirmwareVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconFirmwareVO.h; sourceTree = "<group>"; };
+		6A3170241CD3CB8E0093FE0C /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
+		6A3170251CD3CB8E0093FE0C /* ESTBeaconManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManagerDelegate.h; sourceTree = "<group>"; };
+		6A3170261CD3CB8E0093FE0C /* ESTBeaconRecentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRecentConfig.h; sourceTree = "<group>"; };
+		6A3170271CD3CB8E0093FE0C /* ESTBeaconRecentUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRecentUpdateInfo.h; sourceTree = "<group>"; };
+		6A3170281CD3CB8E0093FE0C /* ESTBeaconUpdateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateConfig.h; sourceTree = "<group>"; };
+		6A3170291CD3CB8E0093FE0C /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
+		6A31702A1CD3CB8E0093FE0C /* ESTBeaconVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconVO.h; sourceTree = "<group>"; };
+		6A31702B1CD3CB8E0093FE0C /* ESTBluetoothBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBluetoothBeacon.h; sourceTree = "<group>"; };
+		6A31702C1CD3CB8E0093FE0C /* ESTBulkUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBulkUpdater.h; sourceTree = "<group>"; };
+		6A31702D1CD3CB8E0093FE0C /* ESTCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCloudManager.h; sourceTree = "<group>"; };
+		6A31702E1CD3CB8E0093FE0C /* ESTCloudSettingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCloudSettingProtocol.h; sourceTree = "<group>"; };
+		6A31702F1CD3CB8E0093FE0C /* ESTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTConfig.h; sourceTree = "<group>"; };
+		6A3170301CD3CB8E0093FE0C /* ESTDateRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDateRule.h; sourceTree = "<group>"; };
+		6A3170311CD3CB8E0093FE0C /* ESTDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDefinitions.h; sourceTree = "<group>"; };
+		6A3170321CD3CB8E0093FE0C /* ESTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDevice.h; sourceTree = "<group>"; };
+		6A3170331CD3CB8E0093FE0C /* ESTDeviceConnectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDeviceConnectable.h; sourceTree = "<group>"; };
+		6A3170341CD3CB8E0093FE0C /* ESTDeviceNearable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDeviceNearable.h; sourceTree = "<group>"; };
+		6A3170351CD3CB8E0093FE0C /* ESTDeviceNearableSettingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDeviceNearableSettingProtocol.h; sourceTree = "<group>"; };
+		6A3170361CD3CB8E0093FE0C /* ESTDeviceSettingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDeviceSettingProtocol.h; sourceTree = "<group>"; };
+		6A3170371CD3CB8E0093FE0C /* ESTEddystone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTEddystone.h; sourceTree = "<group>"; };
+		6A3170381CD3CB8E0093FE0C /* ESTEddystoneFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTEddystoneFilter.h; sourceTree = "<group>"; };
+		6A3170391CD3CB8E0093FE0C /* ESTEddystoneFilterUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTEddystoneFilterUID.h; sourceTree = "<group>"; };
+		6A31703A1CD3CB8E0093FE0C /* ESTEddystoneFilterURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTEddystoneFilterURL.h; sourceTree = "<group>"; };
+		6A31703B1CD3CB8E0093FE0C /* ESTEddystoneFilterURLDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTEddystoneFilterURLDomain.h; sourceTree = "<group>"; };
+		6A31703C1CD3CB8E0093FE0C /* ESTEddystoneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTEddystoneManager.h; sourceTree = "<group>"; };
+		6A31703D1CD3CB8E0093FE0C /* ESTEddystoneTelemetry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTEddystoneTelemetry.h; sourceTree = "<group>"; };
+		6A31703E1CD3CB8E0093FE0C /* ESTEddystoneUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTEddystoneUID.h; sourceTree = "<group>"; };
+		6A31703F1CD3CB8E0093FE0C /* ESTFirmwareInfoVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTFirmwareInfoVO.h; sourceTree = "<group>"; };
+		6A3170401CD3CB8E0093FE0C /* EstimoteSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstimoteSDK.h; sourceTree = "<group>"; };
+		6A3170411CD3CB8E0093FE0C /* ESTMotionRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionRule.h; sourceTree = "<group>"; };
+		6A3170421CD3CB8E0093FE0C /* ESTNearable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearable.h; sourceTree = "<group>"; };
+		6A3170431CD3CB8E0093FE0C /* ESTNearableDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableDefinitions.h; sourceTree = "<group>"; };
+		6A3170441CD3CB8E0093FE0C /* ESTNearableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableManager.h; sourceTree = "<group>"; };
+		6A3170451CD3CB8E0093FE0C /* ESTNearableRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableRule.h; sourceTree = "<group>"; };
+		6A3170461CD3CB8E0093FE0C /* ESTNearableSettingAdvertisingIntervalStill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableSettingAdvertisingIntervalStill.h; sourceTree = "<group>"; };
+		6A3170471CD3CB8E0093FE0C /* ESTNearableSettingAppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableSettingAppVersion.h; sourceTree = "<group>"; };
+		6A3170481CD3CB8E0093FE0C /* ESTNearableSettingBootVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableSettingBootVersion.h; sourceTree = "<group>"; };
+		6A3170491CD3CB8E0093FE0C /* ESTNearableSettingBroadcastingPower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableSettingBroadcastingPower.h; sourceTree = "<group>"; };
+		6A31704A1CD3CB8E0093FE0C /* ESTNearableSettingHardwareVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableSettingHardwareVersion.h; sourceTree = "<group>"; };
+		6A31704B1CD3CB8E0093FE0C /* ESTNearableVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableVO.h; sourceTree = "<group>"; };
+		6A31704C1CD3CB8E0093FE0C /* ESTNotificationSettingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNotificationSettingProtocol.h; sourceTree = "<group>"; };
+		6A31704D1CD3CB8E0093FE0C /* ESTNotificationTransporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNotificationTransporter.h; sourceTree = "<group>"; };
+		6A31704E1CD3CB8E0093FE0C /* ESTOrientationRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTOrientationRule.h; sourceTree = "<group>"; };
+		6A31704F1CD3CB8E0093FE0C /* ESTProximityRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTProximityRule.h; sourceTree = "<group>"; };
+		6A3170501CD3CB8E0093FE0C /* ESTRequestAssignGPSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestAssignGPSLocation.h; sourceTree = "<group>"; };
+		6A3170511CD3CB8E0093FE0C /* ESTRequestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestBase.h; sourceTree = "<group>"; };
+		6A3170521CD3CB8E0093FE0C /* ESTRequestBeaconColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestBeaconColor.h; sourceTree = "<group>"; };
+		6A3170531CD3CB8E0093FE0C /* ESTRequestBeaconDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestBeaconDetails.h; sourceTree = "<group>"; };
+		6A3170541CD3CB8E0093FE0C /* ESTRequestBeaconMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestBeaconMac.h; sourceTree = "<group>"; };
+		6A3170551CD3CB8E0093FE0C /* ESTRequestCancelPendingSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestCancelPendingSettings.h; sourceTree = "<group>"; };
+		6A3170561CD3CB8E0093FE0C /* ESTRequestDelete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestDelete.h; sourceTree = "<group>"; };
+		6A3170571CD3CB8E0093FE0C /* ESTRequestGetBeacons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestGetBeacons.h; sourceTree = "<group>"; };
+		6A3170581CD3CB8E0093FE0C /* ESTRequestGetBeaconsDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestGetBeaconsDetails.h; sourceTree = "<group>"; };
+		6A3170591CD3CB8E0093FE0C /* ESTRequestGetBeaconsPublicDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestGetBeaconsPublicDetails.h; sourceTree = "<group>"; };
+		6A31705A1CD3CB8E0093FE0C /* ESTRequestGetJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestGetJSON.h; sourceTree = "<group>"; };
+		6A31705B1CD3CB8E0093FE0C /* ESTRequestGetNearables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestGetNearables.h; sourceTree = "<group>"; };
+		6A31705C1CD3CB8E0093FE0C /* ESTRequestGetPendingSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestGetPendingSettings.h; sourceTree = "<group>"; };
+		6A31705D1CD3CB8E0093FE0C /* ESTRequestGetSettingsHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestGetSettingsHistory.h; sourceTree = "<group>"; };
+		6A31705E1CD3CB8E0093FE0C /* ESTRequestPatchJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestPatchJSON.h; sourceTree = "<group>"; };
+		6A31705F1CD3CB8E0093FE0C /* ESTRequestPostFormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestPostFormData.h; sourceTree = "<group>"; };
+		6A3170601CD3CB8E0093FE0C /* ESTRequestPostJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestPostJSON.h; sourceTree = "<group>"; };
+		6A3170611CD3CB8E0093FE0C /* ESTRequestPutJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestPutJSON.h; sourceTree = "<group>"; };
+		6A3170621CD3CB8E0093FE0C /* ESTRequestRegisterDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRequestRegisterDevice.h; sourceTree = "<group>"; };
+		6A3170631CD3CB8E0093FE0C /* ESTRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRule.h; sourceTree = "<group>"; };
+		6A3170641CD3CB8E0093FE0C /* ESTSecureBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTSecureBeaconManager.h; sourceTree = "<group>"; };
+		6A3170651CD3CB8E0093FE0C /* ESTSettingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTSettingProtocol.h; sourceTree = "<group>"; };
+		6A3170661CD3CB8E0093FE0C /* ESTSimulatedNearableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTSimulatedNearableManager.h; sourceTree = "<group>"; };
+		6A3170671CD3CB8E0093FE0C /* ESTTemperatureRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTemperatureRule.h; sourceTree = "<group>"; };
+		6A3170681CD3CB8E0093FE0C /* ESTTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTrigger.h; sourceTree = "<group>"; };
+		6A3170691CD3CB8E0093FE0C /* ESTTriggerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTriggerManager.h; sourceTree = "<group>"; };
+		6A31706A1CD3CB8E0093FE0C /* ESTUtilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTUtilityManager.h; sourceTree = "<group>"; };
+		6A31706C1CD3CB8E0093FE0C /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Manifest.lock; sourceTree = "<group>"; };
+		6A31706D1CD3CB8E0093FE0C /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		6A3170721CD3CB8E0093FE0C /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6A3170731CD3CB8E0093FE0C /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		6A3170751CD3CB8E0093FE0C /* Pods-frameworks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		6A3170761CD3CB8E0093FE0C /* Pods-resources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		6A3170771CD3CB8E0093FE0C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		6A3170781CD3CB8E0093FE0C /* Pods.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
 		793239861CCE2AB2005A9D8A /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		7963409D1CD0052400E3C567 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		79B50AB81CC96F19005A2CF9 /* SecurityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +313,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F99123CE06506E9A1C686E1B /* libPods.a in Frameworks */,
+				6A3170791CD3CB8E0093FE0C /* libEstimoteIndoorSDK.a in Frameworks */,
+				6A3170A01CD3CB8E0093FE0C /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +337,325 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6A316FB51CD3CB8E0093FE0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A316FB61CD3CB8E0093FE0C /* EstimoteIndoorSDK */,
+				6A316FF21CD3CB8E0093FE0C /* EstimoteSDK */,
+				6A316FF71CD3CB8E0093FE0C /* Headers */,
+				6A31706B1CD3CB8E0093FE0C /* Local Podspecs */,
+				6A31706C1CD3CB8E0093FE0C /* Manifest.lock */,
+				6A3170701CD3CB8E0093FE0C /* Target Support Files */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		6A316FB61CD3CB8E0093FE0C /* EstimoteIndoorSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6A316FB71CD3CB8E0093FE0C /* EstimoteIndoorLocationSDK */,
+				6A316FF01CD3CB8E0093FE0C /* LICENSE */,
+				6A316FF11CD3CB8E0093FE0C /* README.md */,
+			);
+			path = EstimoteIndoorSDK;
+			sourceTree = "<group>";
+		};
+		6A316FB71CD3CB8E0093FE0C /* EstimoteIndoorLocationSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6A316FB81CD3CB8E0093FE0C /* Headers */,
+				6A316FCA1CD3CB8E0093FE0C /* libEstimoteIndoorSDK.a */,
+				6A316FCB1CD3CB8E0093FE0C /* Resources */,
+			);
+			path = EstimoteIndoorLocationSDK;
+			sourceTree = "<group>";
+		};
+		6A316FB81CD3CB8E0093FE0C /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				6A316FB91CD3CB8E0093FE0C /* EILIndoorLocationManager.h */,
+				6A316FBA1CD3CB8E0093FE0C /* EILIndoorLocationView.h */,
+				6A316FBB1CD3CB8E0093FE0C /* EILIndoorSDK.h */,
+				6A316FBC1CD3CB8E0093FE0C /* EILLocation.h */,
+				6A316FBD1CD3CB8E0093FE0C /* EILLocationBuilder.h */,
+				6A316FBE1CD3CB8E0093FE0C /* EILLocationLinearObject.h */,
+				6A316FBF1CD3CB8E0093FE0C /* EILOrientedLineSegment.h */,
+				6A316FC01CD3CB8E0093FE0C /* EILOrientedPoint.h */,
+				6A316FC11CD3CB8E0093FE0C /* EILPoint.h */,
+				6A316FC21CD3CB8E0093FE0C /* EILPositionedBeacon.h */,
+				6A316FC31CD3CB8E0093FE0C /* EILPositionView.h */,
+				6A316FC41CD3CB8E0093FE0C /* EILRequestAddLocation.h */,
+				6A316FC51CD3CB8E0093FE0C /* EILRequestFetchLocation.h */,
+				6A316FC61CD3CB8E0093FE0C /* EILRequestFetchLocations.h */,
+				6A316FC71CD3CB8E0093FE0C /* EILRequestFetchPublicLocations.h */,
+				6A316FC81CD3CB8E0093FE0C /* EILRequestModifyLocation.h */,
+				6A316FC91CD3CB8E0093FE0C /* EILRequestRemoveLocation.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		6A316FCB1CD3CB8E0093FE0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6A316FCC1CD3CB8E0093FE0C /* avatar.png */,
+				6A316FCD1CD3CB8E0093FE0C /* avatar@2x.png */,
+				6A316FCE1CD3CB8E0093FE0C /* avatar@3x.png */,
+				6A316FCF1CD3CB8E0093FE0C /* avatar_noarrow.png */,
+				6A316FD01CD3CB8E0093FE0C /* avatar_noarrow@2x.png */,
+				6A316FD11CD3CB8E0093FE0C /* avatar_noarrow@3x.png */,
+				6A316FD21CD3CB8E0093FE0C /* beaconBeetrootSmall.png */,
+				6A316FD31CD3CB8E0093FE0C /* beaconBeetrootSmall@2x.png */,
+				6A316FD41CD3CB8E0093FE0C /* beaconBeetrootSmall@3x.png */,
+				6A316FD51CD3CB8E0093FE0C /* beaconBlackSmall.png */,
+				6A316FD61CD3CB8E0093FE0C /* beaconBlackSmall@2x.png */,
+				6A316FD71CD3CB8E0093FE0C /* beaconBlackSmall@3x.png */,
+				6A316FD81CD3CB8E0093FE0C /* beaconBlueberrySmall.png */,
+				6A316FD91CD3CB8E0093FE0C /* beaconBlueberrySmall@2x.png */,
+				6A316FDA1CD3CB8E0093FE0C /* beaconBlueberrySmall@3x.png */,
+				6A316FDB1CD3CB8E0093FE0C /* beaconCandySmall.png */,
+				6A316FDC1CD3CB8E0093FE0C /* beaconCandySmall@2x.png */,
+				6A316FDD1CD3CB8E0093FE0C /* beaconCandySmall@3x.png */,
+				6A316FDE1CD3CB8E0093FE0C /* beaconGreySmall.png */,
+				6A316FDF1CD3CB8E0093FE0C /* beaconGreySmall@2x.png */,
+				6A316FE01CD3CB8E0093FE0C /* beaconGreySmall@3x.png */,
+				6A316FE11CD3CB8E0093FE0C /* beaconIcySmall.png */,
+				6A316FE21CD3CB8E0093FE0C /* beaconIcySmall@2x.png */,
+				6A316FE31CD3CB8E0093FE0C /* beaconIcySmall@3x.png */,
+				6A316FE41CD3CB8E0093FE0C /* beaconLemonSmall.png */,
+				6A316FE51CD3CB8E0093FE0C /* beaconLemonSmall@2x.png */,
+				6A316FE61CD3CB8E0093FE0C /* beaconLemonSmall@3x.png */,
+				6A316FE71CD3CB8E0093FE0C /* beaconMintSmall.png */,
+				6A316FE81CD3CB8E0093FE0C /* beaconMintSmall@2x.png */,
+				6A316FE91CD3CB8E0093FE0C /* beaconMintSmall@3x.png */,
+				6A316FEA1CD3CB8E0093FE0C /* beaconTransparentSmall.png */,
+				6A316FEB1CD3CB8E0093FE0C /* beaconTransparentSmall@2x.png */,
+				6A316FEC1CD3CB8E0093FE0C /* beaconTransparentSmall@3x.png */,
+				6A316FED1CD3CB8E0093FE0C /* beaconWhiteSmall.png */,
+				6A316FEE1CD3CB8E0093FE0C /* beaconWhiteSmall@2x.png */,
+				6A316FEF1CD3CB8E0093FE0C /* beaconWhiteSmall@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6A316FF21CD3CB8E0093FE0C /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6A316FF31CD3CB8E0093FE0C /* EstimoteSDK */,
+				6A316FF51CD3CB8E0093FE0C /* LICENSE */,
+				6A316FF61CD3CB8E0093FE0C /* README.md */,
+			);
+			path = EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		6A316FF31CD3CB8E0093FE0C /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6A316FF41CD3CB8E0093FE0C /* EstimoteSDK.framework */,
+			);
+			path = EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		6A316FF71CD3CB8E0093FE0C /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				6A316FF81CD3CB8E0093FE0C /* Private */,
+				6A31700B1CD3CB8E0093FE0C /* Public */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		6A316FF81CD3CB8E0093FE0C /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				6A316FF91CD3CB8E0093FE0C /* EstimoteIndoorSDK */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		6A316FF91CD3CB8E0093FE0C /* EstimoteIndoorSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6A316FFA1CD3CB8E0093FE0C /* EILIndoorLocationManager.h */,
+				6A316FFB1CD3CB8E0093FE0C /* EILIndoorLocationView.h */,
+				6A316FFC1CD3CB8E0093FE0C /* EILIndoorSDK.h */,
+				6A316FFD1CD3CB8E0093FE0C /* EILLocation.h */,
+				6A316FFE1CD3CB8E0093FE0C /* EILLocationBuilder.h */,
+				6A316FFF1CD3CB8E0093FE0C /* EILLocationLinearObject.h */,
+				6A3170001CD3CB8E0093FE0C /* EILOrientedLineSegment.h */,
+				6A3170011CD3CB8E0093FE0C /* EILOrientedPoint.h */,
+				6A3170021CD3CB8E0093FE0C /* EILPoint.h */,
+				6A3170031CD3CB8E0093FE0C /* EILPositionedBeacon.h */,
+				6A3170041CD3CB8E0093FE0C /* EILPositionView.h */,
+				6A3170051CD3CB8E0093FE0C /* EILRequestAddLocation.h */,
+				6A3170061CD3CB8E0093FE0C /* EILRequestFetchLocation.h */,
+				6A3170071CD3CB8E0093FE0C /* EILRequestFetchLocations.h */,
+				6A3170081CD3CB8E0093FE0C /* EILRequestFetchPublicLocations.h */,
+				6A3170091CD3CB8E0093FE0C /* EILRequestModifyLocation.h */,
+				6A31700A1CD3CB8E0093FE0C /* EILRequestRemoveLocation.h */,
+			);
+			path = EstimoteIndoorSDK;
+			sourceTree = "<group>";
+		};
+		6A31700B1CD3CB8E0093FE0C /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				6A31700C1CD3CB8E0093FE0C /* EstimoteIndoorSDK */,
+				6A31701E1CD3CB8E0093FE0C /* EstimoteSDK */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		6A31700C1CD3CB8E0093FE0C /* EstimoteIndoorSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6A31700D1CD3CB8E0093FE0C /* EILIndoorLocationManager.h */,
+				6A31700E1CD3CB8E0093FE0C /* EILIndoorLocationView.h */,
+				6A31700F1CD3CB8E0093FE0C /* EILIndoorSDK.h */,
+				6A3170101CD3CB8E0093FE0C /* EILLocation.h */,
+				6A3170111CD3CB8E0093FE0C /* EILLocationBuilder.h */,
+				6A3170121CD3CB8E0093FE0C /* EILLocationLinearObject.h */,
+				6A3170131CD3CB8E0093FE0C /* EILOrientedLineSegment.h */,
+				6A3170141CD3CB8E0093FE0C /* EILOrientedPoint.h */,
+				6A3170151CD3CB8E0093FE0C /* EILPoint.h */,
+				6A3170161CD3CB8E0093FE0C /* EILPositionedBeacon.h */,
+				6A3170171CD3CB8E0093FE0C /* EILPositionView.h */,
+				6A3170181CD3CB8E0093FE0C /* EILRequestAddLocation.h */,
+				6A3170191CD3CB8E0093FE0C /* EILRequestFetchLocation.h */,
+				6A31701A1CD3CB8E0093FE0C /* EILRequestFetchLocations.h */,
+				6A31701B1CD3CB8E0093FE0C /* EILRequestFetchPublicLocations.h */,
+				6A31701C1CD3CB8E0093FE0C /* EILRequestModifyLocation.h */,
+				6A31701D1CD3CB8E0093FE0C /* EILRequestRemoveLocation.h */,
+			);
+			path = EstimoteIndoorSDK;
+			sourceTree = "<group>";
+		};
+		6A31701E1CD3CB8E0093FE0C /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6A31701F1CD3CB8E0093FE0C /* EstimoteSDK */,
+			);
+			path = EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		6A31701F1CD3CB8E0093FE0C /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6A3170201CD3CB8E0093FE0C /* ESTBeaconBaseVO.h */,
+				6A3170211CD3CB8E0093FE0C /* ESTBeaconConnection.h */,
+				6A3170221CD3CB8E0093FE0C /* ESTBeaconDefinitions.h */,
+				6A3170231CD3CB8E0093FE0C /* ESTBeaconFirmwareVO.h */,
+				6A3170241CD3CB8E0093FE0C /* ESTBeaconManager.h */,
+				6A3170251CD3CB8E0093FE0C /* ESTBeaconManagerDelegate.h */,
+				6A3170261CD3CB8E0093FE0C /* ESTBeaconRecentConfig.h */,
+				6A3170271CD3CB8E0093FE0C /* ESTBeaconRecentUpdateInfo.h */,
+				6A3170281CD3CB8E0093FE0C /* ESTBeaconUpdateConfig.h */,
+				6A3170291CD3CB8E0093FE0C /* ESTBeaconUpdateInfo.h */,
+				6A31702A1CD3CB8E0093FE0C /* ESTBeaconVO.h */,
+				6A31702B1CD3CB8E0093FE0C /* ESTBluetoothBeacon.h */,
+				6A31702C1CD3CB8E0093FE0C /* ESTBulkUpdater.h */,
+				6A31702D1CD3CB8E0093FE0C /* ESTCloudManager.h */,
+				6A31702E1CD3CB8E0093FE0C /* ESTCloudSettingProtocol.h */,
+				6A31702F1CD3CB8E0093FE0C /* ESTConfig.h */,
+				6A3170301CD3CB8E0093FE0C /* ESTDateRule.h */,
+				6A3170311CD3CB8E0093FE0C /* ESTDefinitions.h */,
+				6A3170321CD3CB8E0093FE0C /* ESTDevice.h */,
+				6A3170331CD3CB8E0093FE0C /* ESTDeviceConnectable.h */,
+				6A3170341CD3CB8E0093FE0C /* ESTDeviceNearable.h */,
+				6A3170351CD3CB8E0093FE0C /* ESTDeviceNearableSettingProtocol.h */,
+				6A3170361CD3CB8E0093FE0C /* ESTDeviceSettingProtocol.h */,
+				6A3170371CD3CB8E0093FE0C /* ESTEddystone.h */,
+				6A3170381CD3CB8E0093FE0C /* ESTEddystoneFilter.h */,
+				6A3170391CD3CB8E0093FE0C /* ESTEddystoneFilterUID.h */,
+				6A31703A1CD3CB8E0093FE0C /* ESTEddystoneFilterURL.h */,
+				6A31703B1CD3CB8E0093FE0C /* ESTEddystoneFilterURLDomain.h */,
+				6A31703C1CD3CB8E0093FE0C /* ESTEddystoneManager.h */,
+				6A31703D1CD3CB8E0093FE0C /* ESTEddystoneTelemetry.h */,
+				6A31703E1CD3CB8E0093FE0C /* ESTEddystoneUID.h */,
+				6A31703F1CD3CB8E0093FE0C /* ESTFirmwareInfoVO.h */,
+				6A3170401CD3CB8E0093FE0C /* EstimoteSDK.h */,
+				6A3170411CD3CB8E0093FE0C /* ESTMotionRule.h */,
+				6A3170421CD3CB8E0093FE0C /* ESTNearable.h */,
+				6A3170431CD3CB8E0093FE0C /* ESTNearableDefinitions.h */,
+				6A3170441CD3CB8E0093FE0C /* ESTNearableManager.h */,
+				6A3170451CD3CB8E0093FE0C /* ESTNearableRule.h */,
+				6A3170461CD3CB8E0093FE0C /* ESTNearableSettingAdvertisingIntervalStill.h */,
+				6A3170471CD3CB8E0093FE0C /* ESTNearableSettingAppVersion.h */,
+				6A3170481CD3CB8E0093FE0C /* ESTNearableSettingBootVersion.h */,
+				6A3170491CD3CB8E0093FE0C /* ESTNearableSettingBroadcastingPower.h */,
+				6A31704A1CD3CB8E0093FE0C /* ESTNearableSettingHardwareVersion.h */,
+				6A31704B1CD3CB8E0093FE0C /* ESTNearableVO.h */,
+				6A31704C1CD3CB8E0093FE0C /* ESTNotificationSettingProtocol.h */,
+				6A31704D1CD3CB8E0093FE0C /* ESTNotificationTransporter.h */,
+				6A31704E1CD3CB8E0093FE0C /* ESTOrientationRule.h */,
+				6A31704F1CD3CB8E0093FE0C /* ESTProximityRule.h */,
+				6A3170501CD3CB8E0093FE0C /* ESTRequestAssignGPSLocation.h */,
+				6A3170511CD3CB8E0093FE0C /* ESTRequestBase.h */,
+				6A3170521CD3CB8E0093FE0C /* ESTRequestBeaconColor.h */,
+				6A3170531CD3CB8E0093FE0C /* ESTRequestBeaconDetails.h */,
+				6A3170541CD3CB8E0093FE0C /* ESTRequestBeaconMac.h */,
+				6A3170551CD3CB8E0093FE0C /* ESTRequestCancelPendingSettings.h */,
+				6A3170561CD3CB8E0093FE0C /* ESTRequestDelete.h */,
+				6A3170571CD3CB8E0093FE0C /* ESTRequestGetBeacons.h */,
+				6A3170581CD3CB8E0093FE0C /* ESTRequestGetBeaconsDetails.h */,
+				6A3170591CD3CB8E0093FE0C /* ESTRequestGetBeaconsPublicDetails.h */,
+				6A31705A1CD3CB8E0093FE0C /* ESTRequestGetJSON.h */,
+				6A31705B1CD3CB8E0093FE0C /* ESTRequestGetNearables.h */,
+				6A31705C1CD3CB8E0093FE0C /* ESTRequestGetPendingSettings.h */,
+				6A31705D1CD3CB8E0093FE0C /* ESTRequestGetSettingsHistory.h */,
+				6A31705E1CD3CB8E0093FE0C /* ESTRequestPatchJSON.h */,
+				6A31705F1CD3CB8E0093FE0C /* ESTRequestPostFormData.h */,
+				6A3170601CD3CB8E0093FE0C /* ESTRequestPostJSON.h */,
+				6A3170611CD3CB8E0093FE0C /* ESTRequestPutJSON.h */,
+				6A3170621CD3CB8E0093FE0C /* ESTRequestRegisterDevice.h */,
+				6A3170631CD3CB8E0093FE0C /* ESTRule.h */,
+				6A3170641CD3CB8E0093FE0C /* ESTSecureBeaconManager.h */,
+				6A3170651CD3CB8E0093FE0C /* ESTSettingProtocol.h */,
+				6A3170661CD3CB8E0093FE0C /* ESTSimulatedNearableManager.h */,
+				6A3170671CD3CB8E0093FE0C /* ESTTemperatureRule.h */,
+				6A3170681CD3CB8E0093FE0C /* ESTTrigger.h */,
+				6A3170691CD3CB8E0093FE0C /* ESTTriggerManager.h */,
+				6A31706A1CD3CB8E0093FE0C /* ESTUtilityManager.h */,
+			);
+			path = EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		6A31706B1CD3CB8E0093FE0C /* Local Podspecs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Local Podspecs";
+			sourceTree = "<group>";
+		};
+		6A3170701CD3CB8E0093FE0C /* Target Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A3170711CD3CB8E0093FE0C /* Pods */,
+			);
+			path = "Target Support Files";
+			sourceTree = "<group>";
+		};
+		6A3170711CD3CB8E0093FE0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A3170721CD3CB8E0093FE0C /* Pods-acknowledgements.markdown */,
+				6A3170731CD3CB8E0093FE0C /* Pods-acknowledgements.plist */,
+				6A3170751CD3CB8E0093FE0C /* Pods-frameworks.sh */,
+				6A3170761CD3CB8E0093FE0C /* Pods-resources.sh */,
+				6A3170771CD3CB8E0093FE0C /* Pods.debug.xcconfig */,
+				6A3170781CD3CB8E0093FE0C /* Pods.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6A3170AE1CD3CC000093FE0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A3170B21CD3CC000093FE0C /* libPods.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6D46D0A816093F81E8A62DEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +667,18 @@
 		79F47DF31CB672B200D723C4 = {
 			isa = PBXGroup;
 			children = (
+				6A316FB11CD3CAC90093FE0C /* Airport+CoreDataProperties.swift */,
+				6A316FB21CD3CAC90093FE0C /* Airport.swift */,
+				6A316F9B1CD3CA990093FE0C /* Passenger+CoreDataProperties.swift */,
+				6A316F9C1CD3CA990093FE0C /* Passenger.swift */,
+				6A316F9D1CD3CA990093FE0C /* LocationCate+CoreDataProperties.swift */,
+				6A316F9E1CD3CA990093FE0C /* LocationCate.swift */,
+				6A316F9F1CD3CA990093FE0C /* Location+CoreDataProperties.swift */,
+				6A316FA01CD3CA990093FE0C /* Location.swift */,
+				6A316FA11CD3CA990093FE0C /* Category+CoreDataProperties.swift */,
+				6A316FA21CD3CA990093FE0C /* Category.swift */,
+				6A316FA31CD3CA990093FE0C /* Beacon+CoreDataProperties.swift */,
+				6A316FA41CD3CA990093FE0C /* Beacon.swift */,
 				79F47DFE1CB672B200D723C4 /* Airport */,
 				79F47E131CB672B200D723C4 /* AirportTests */,
 				79F47DFD1CB672B200D723C4 /* Products */,
@@ -121,6 +710,7 @@
 				79F47E061CB672B200D723C4 /* Assets.xcassets */,
 				79F47E0B1CB672B200D723C4 /* Info.plist */,
 				6A0D818C1CD1F86100901DAF /* Airport-Bridging-Header.h */,
+				6A316FB51CD3CB8E0093FE0C /* Pods */,
 			);
 			path = Airport;
 			sourceTree = "<group>";
@@ -128,6 +718,7 @@
 		79F47E131CB672B200D723C4 /* AirportTests */ = {
 			isa = PBXGroup;
 			children = (
+				6A31706D1CD3CB8E0093FE0C /* Pods.xcodeproj */,
 				79F47E141CB672B200D723C4 /* AirportTests.swift */,
 				79F47E161CB672B200D723C4 /* Info.plist */,
 			);
@@ -207,6 +798,12 @@
 			mainGroup = 79F47DF31CB672B200D723C4;
 			productRefGroup = 79F47DFD1CB672B200D723C4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6A3170AE1CD3CC000093FE0C /* Products */;
+					ProjectRef = 6A31706D1CD3CB8E0093FE0C /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				79F47DFB1CB672B200D723C4 /* Airport */,
@@ -215,13 +812,67 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		6A3170B21CD3CC000093FE0C /* libPods.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPods.a;
+			remoteRef = 6A3170B11CD3CC000093FE0C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		79F47DFA1CB672B200D723C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A3170811CD3CB8E0093FE0C /* beaconBeetrootSmall@2x.png in Resources */,
+				6A3170A71CD3CB8E0093FE0C /* Pods-frameworks.sh in Resources */,
+				6A31707E1CD3CB8E0093FE0C /* avatar_noarrow@2x.png in Resources */,
+				6A31708B1CD3CB8E0093FE0C /* beaconCandySmall@3x.png in Resources */,
+				6A31708A1CD3CB8E0093FE0C /* beaconCandySmall@2x.png in Resources */,
+				6A3170911CD3CB8E0093FE0C /* beaconIcySmall@3x.png in Resources */,
+				6A3170941CD3CB8E0093FE0C /* beaconLemonSmall@3x.png in Resources */,
+				6A3170851CD3CB8E0093FE0C /* beaconBlackSmall@3x.png in Resources */,
+				6A3170AA1CD3CB8E0093FE0C /* Pods.release.xcconfig in Resources */,
+				6A31707A1CD3CB8E0093FE0C /* avatar.png in Resources */,
+				6A3170961CD3CB8E0093FE0C /* beaconMintSmall@2x.png in Resources */,
+				6A3170931CD3CB8E0093FE0C /* beaconLemonSmall@2x.png in Resources */,
+				6A31709B1CD3CB8E0093FE0C /* beaconWhiteSmall.png in Resources */,
+				6A31707C1CD3CB8E0093FE0C /* avatar@3x.png in Resources */,
+				6A3170841CD3CB8E0093FE0C /* beaconBlackSmall@2x.png in Resources */,
+				6A31707D1CD3CB8E0093FE0C /* avatar_noarrow.png in Resources */,
+				6A3170A81CD3CB8E0093FE0C /* Pods-resources.sh in Resources */,
+				6A3170A51CD3CB8E0093FE0C /* Pods-acknowledgements.plist in Resources */,
+				6A3170921CD3CB8E0093FE0C /* beaconLemonSmall.png in Resources */,
+				6A3170971CD3CB8E0093FE0C /* beaconMintSmall@3x.png in Resources */,
+				6A3170901CD3CB8E0093FE0C /* beaconIcySmall@2x.png in Resources */,
+				6A3170991CD3CB8E0093FE0C /* beaconTransparentSmall@2x.png in Resources */,
+				6A3170A91CD3CB8E0093FE0C /* Pods.debug.xcconfig in Resources */,
+				6A3170821CD3CB8E0093FE0C /* beaconBeetrootSmall@3x.png in Resources */,
+				6A31709C1CD3CB8E0093FE0C /* beaconWhiteSmall@2x.png in Resources */,
+				6A31708F1CD3CB8E0093FE0C /* beaconIcySmall.png in Resources */,
+				6A3170831CD3CB8E0093FE0C /* beaconBlackSmall.png in Resources */,
+				6A31708E1CD3CB8E0093FE0C /* beaconGreySmall@3x.png in Resources */,
+				6A3170A11CD3CB8E0093FE0C /* LICENSE in Resources */,
+				6A3170861CD3CB8E0093FE0C /* beaconBlueberrySmall.png in Resources */,
+				6A3170981CD3CB8E0093FE0C /* beaconTransparentSmall.png in Resources */,
+				6A3170801CD3CB8E0093FE0C /* beaconBeetrootSmall.png in Resources */,
+				6A31707F1CD3CB8E0093FE0C /* avatar_noarrow@3x.png in Resources */,
 				79F47E071CB672B200D723C4 /* Assets.xcassets in Resources */,
+				6A31709A1CD3CB8E0093FE0C /* beaconTransparentSmall@3x.png in Resources */,
+				6A31709E1CD3CB8E0093FE0C /* LICENSE in Resources */,
+				6A31707B1CD3CB8E0093FE0C /* avatar@2x.png in Resources */,
+				6A3170871CD3CB8E0093FE0C /* beaconBlueberrySmall@2x.png in Resources */,
+				6A31708D1CD3CB8E0093FE0C /* beaconGreySmall@2x.png in Resources */,
+				6A3170881CD3CB8E0093FE0C /* beaconBlueberrySmall@3x.png in Resources */,
+				6A31708C1CD3CB8E0093FE0C /* beaconGreySmall.png in Resources */,
 				7963409E1CD0052400E3C567 /* Main.storyboard in Resources */,
+				6A3170A31CD3CB8E0093FE0C /* Manifest.lock in Resources */,
+				6A3170891CD3CB8E0093FE0C /* beaconCandySmall.png in Resources */,
+				6A3170951CD3CB8E0093FE0C /* beaconMintSmall.png in Resources */,
+				6A31709D1CD3CB8E0093FE0C /* beaconWhiteSmall@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +938,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A316FA71CD3CA990093FE0C /* Passenger+CoreDataProperties.swift in Sources */,
 				79E0AECC1CC95922007F1F98 /* CheckInViewController.swift in Sources */,
+				6A31709F1CD3CB8E0093FE0C /* README.md in Sources */,
+				6A3170A21CD3CB8E0093FE0C /* README.md in Sources */,
 				79B50AB91CC96F19005A2CF9 /* SecurityViewController.swift in Sources */,
+				6A316FA91CD3CA990093FE0C /* LocationCate+CoreDataProperties.swift in Sources */,
 				79F47E001CB672B200D723C4 /* AppDelegate.swift in Sources */,
+				6A316FB01CD3CA990093FE0C /* Beacon.swift in Sources */,
+				6A316FAA1CD3CA990093FE0C /* LocationCate.swift in Sources */,
+				6A3170A41CD3CB8E0093FE0C /* Pods-acknowledgements.markdown in Sources */,
+				6A316FAC1CD3CA990093FE0C /* Location.swift in Sources */,
+				6A316FB31CD3CAC90093FE0C /* Airport+CoreDataProperties.swift in Sources */,
+				6A316FAD1CD3CA990093FE0C /* Category+CoreDataProperties.swift in Sources */,
 				6A0D81501CD1A72E00901DAF /* Model.xcdatamodeld in Sources */,
+				6A316FA81CD3CA990093FE0C /* Passenger.swift in Sources */,
+				6A316FB41CD3CAC90093FE0C /* Airport.swift in Sources */,
+				6A316FAB1CD3CA990093FE0C /* Location+CoreDataProperties.swift in Sources */,
+				6A316FAE1CD3CA990093FE0C /* Category.swift in Sources */,
 				793239871CCE2AB2005A9D8A /* ServiceViewController.swift in Sources */,
+				6A316FAF1CD3CA990093FE0C /* Beacon+CoreDataProperties.swift in Sources */,
 				79C2E69A1CCFB9B300B82DB3 /* QRCodeScannerViewController.swift in Sources */,
 				79C2E69C1CCFBD2C00B82DB3 /* MapViewController.swift in Sources */,
 			);
@@ -408,9 +1074,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/EstimoteSDK/EstimoteSDK",
+				);
 				INFOPLIST_FILE = Airport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/EstimoteIndoorSDK/EstimoteIndoorLocationSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = happiness.Airport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -425,9 +1099,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/EstimoteSDK/EstimoteSDK",
+				);
 				INFOPLIST_FILE = Airport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/EstimoteIndoorSDK/EstimoteIndoorLocationSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = happiness.Airport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
