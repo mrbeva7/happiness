@@ -12,7 +12,7 @@ import UIKit
 //Reference : 
 //1)Estimote Indoor Location SDK : https://github.com/Estimote/iOS-Indoor-SDK
 //2)The SDK is available as EstimoteIndoorSDK in CocoaPods: https://cocoapods.org
-class MapViewController : UIViewController, UIScrollViewDelegate, EILIndoorLocationManagerDelegate {
+class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate, EILIndoorLocationManagerDelegate {
     //Mark : scollView and imageView variables
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -109,16 +109,30 @@ class MapViewController : UIViewController, UIScrollViewDelegate, EILIndoorLocat
         }
     }
     
-    func tapping(img: AnyObject){
-        displayRoute()
-        print("route added")
+    func tapping(sender:UITapGestureRecognizer){
+//        displayRoute()
+        let point = sender.locationInView(locationView)
+        print(point)
     }
+    
+//    func tapping(img: AnyObject){
+//        displayRoute()
+//        print("route added")
+//    }
+    
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        var destPoint:CGPoint = CGPointZero
+//        if let touch = touches.first as? UITouch{
+//            destPoint = touch.locationView(self.view)
+//        }
+//    }
     
     //Mark : displaying the route
     func displayRoute(){
         var route = UIBezierPath()
         let startPoint = locationView.calculatePicturePointFromRealPoint(currentPosition)
         route.moveToPoint(startPoint)
+        
         let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x :4, y:1.5, orientation: 0))
         route.addLineToPoint(CGPoint(x:destinationPoint.x, y:startPoint.y))
         route.addLineToPoint(destinationPoint)
