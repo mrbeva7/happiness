@@ -23,6 +23,7 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
     var location: EILLocation!
     var currentPosition: EILOrientedPoint!
     var routeLayer: CAShapeLayer! //It draws a cubic Bezier spline in its coordinate space
+    var finalPoint: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
             if let location = location {
                 self.location = location
                 self.locationView.backgroundColor = UIColor.clearColor()
-                self.locationView.showTrace = false
+                self.locationView.showTrace = true
                 self.locationView.traceColor = UIColor.brownColor()
                 self.locationView.rotateOnPositionUpdate = false
                 //self.locationView.showBeacons = true
@@ -81,27 +82,24 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
                 let destinationPoint = UIImageView.init(frame: CGRectMake(0,0,50,50)) //Itrepresents the dimensions of width and height.
                 destinationPoint.image = destinationPointImg
                 
-                //Reference : http://stackoverflow.com/questions/34431459/ios-swift-how-to-add-pinpoint-to-map-on-touch-and-get-detailed-address-of-th
-                //let aSelector : Selector = "mapTapped: "
-                var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapping:")
-                //let tappingRecognizer = UITapGestureRecognizer(target: self, action: aSelector)
-                startingPoint.userInteractionEnabled = true
-                destinationPoint.userInteractionEnabled = true
-                //tappingRecognizer.numberOfTapsRequired = 1
-                //self.view.addGestureRecognizer(tappingRecognizer)
-                //startingPoint.addGestureRecognizer(tappingRecognizer)
-                self.locationView.userInteractionEnabled = true
-                self.locationView.addGestureRecognizer(tap)
-                
                 //locationView.drawObjectInBackground(UIView, withPosition: <#T##EILOrientedPoint#>, identifier: "map") //tells empty or not
                 //locationView.drawObjectInForeground(<#T##object: UIView##UIView#>, withPosition: <#T##EILOrientedPoint#>, identifier: <#T##String#>)
                 
-                // Or Do we need these points?
                 let startingP = EILOrientedPoint(x: 0.5, y:0.5, orientation: 0)
                 let destinationP = EILOrientedPoint(x: 3, y:0.5, orientation: 0)
                 self.locationView.drawObjectInBackground(startingPoint, withPosition: startingP, identifier: "startP")
                 self.locationView.drawObjectInBackground(destinationPoint, withPosition: destinationP, identifier: "destinationP")
                 self.locationManager.startPositionUpdatesForLocation(self.location)
+                
+                //Reference : http://stackoverflow.com/questions/34431459/ios-swift-how-to-add-pinpoint-to-map-on-touch-and-get-detailed-address-of-th
+                var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapping:")
+//                startingPoint.userInteractionEnabled = true
+//                destinationPoint.userInteractionEnabled = true
+                //tappingRecognizer.numberOfTapsRequired = 1
+                //self.view.addGestureRecognizer(tappingRecognizer)
+                //startingPoint.addGestureRecognizer(tappingRecognizer)
+                self.locationView.userInteractionEnabled = true
+                self.locationView.addGestureRecognizer(tap)
                 
             } else {
                 print("can't fetch location: \(error)")
@@ -110,9 +108,10 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
     }
     
     func tapping(sender:UITapGestureRecognizer){
-//        displayRoute()
-        let point = sender.locationInView(locationView)
-        print(point)
+        
+        self.finalPoint = sender.locationInView(locationView)
+        displayRoute()
+        print(finalPoint)
     }
     
 //    func tapping(img: AnyObject){
@@ -133,9 +132,10 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
         let startPoint = locationView.calculatePicturePointFromRealPoint(currentPosition)
         route.moveToPoint(startPoint)
         
-        let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x :4, y:1.5, orientation: 0))
-        route.addLineToPoint(CGPoint(x:destinationPoint.x, y:startPoint.y))
-        route.addLineToPoint(destinationPoint)
+        //let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x :4, y:1.5, orientation: 0))
+//        let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x:finalPoint.x, y:finalPoint.y, orientation: 0))
+        route.addLineToPoint(CGPoint(x:finalPoint.x, y:startPoint.y))
+        route.addLineToPoint(finalPoint)
         
         if routeLayer != nil {
             routeLayer.removeFromSuperlayer()
