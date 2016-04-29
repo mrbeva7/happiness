@@ -1,9 +1,9 @@
 //
 //  Passenger.swift
-//  Airport
+//  
 //
 //  Created by iosdev on 28.4.2016.
-//  Copyright © 2016 RUBING MAO. All rights reserved.
+//
 //
 
 import Foundation

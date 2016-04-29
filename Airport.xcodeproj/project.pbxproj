@@ -8,18 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6A0D81501CD1A72E00901DAF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D814E1CD1A72E00901DAF /* Model.xcdatamodeld */; };
-		6A0D815E1CD1AECD00901DAF /* Airport+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D81521CD1AECD00901DAF /* Airport+CoreDataProperties.swift */; };
-		6A0D815F1CD1AECD00901DAF /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D81531CD1AECD00901DAF /* Airport.swift */; };
-		6A0D81601CD1AECD00901DAF /* Beacon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D81541CD1AECD00901DAF /* Beacon+CoreDataProperties.swift */; };
-		6A0D81611CD1AECD00901DAF /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D81551CD1AECD00901DAF /* Beacon.swift */; };
-		6A0D81621CD1AECD00901DAF /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D81561CD1AECD00901DAF /* Category+CoreDataProperties.swift */; };
-		6A0D81631CD1AECD00901DAF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D81571CD1AECD00901DAF /* Category.swift */; };
-		6A0D81641CD1AECD00901DAF /* LocationCate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D81581CD1AECD00901DAF /* LocationCate+CoreDataProperties.swift */; };
-		6A0D81651CD1AECD00901DAF /* LocationCate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D81591CD1AECD00901DAF /* LocationCate.swift */; };
-		6A0D81661CD1AECD00901DAF /* Passenger+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D815A1CD1AECD00901DAF /* Passenger+CoreDataProperties.swift */; };
-		6A0D81671CD1AECD00901DAF /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D815B1CD1AECD00901DAF /* Passenger.swift */; };
-		6A0D81681CD1AECD00901DAF /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D815C1CD1AECD00901DAF /* Location+CoreDataProperties.swift */; };
-		6A0D81691CD1AECD00901DAF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D815D1CD1AECD00901DAF /* Location.swift */; };
 		793239871CCE2AB2005A9D8A /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793239861CCE2AB2005A9D8A /* ServiceViewController.swift */; };
 		7963409E1CD0052400E3C567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7963409D1CD0052400E3C567 /* Main.storyboard */; };
 		79B50AB91CC96F19005A2CF9 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B50AB81CC96F19005A2CF9 /* SecurityViewController.swift */; };
@@ -46,18 +34,6 @@
 		2D83F780AEA468BF1698B8BF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E38A7168F42C680E8410FA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6A0D814F1CD1A72E00901DAF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		6A0D81521CD1AECD00901DAF /* Airport+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Airport+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6A0D81531CD1AECD00901DAF /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
-		6A0D81541CD1AECD00901DAF /* Beacon+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Beacon+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6A0D81551CD1AECD00901DAF /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
-		6A0D81561CD1AECD00901DAF /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6A0D81571CD1AECD00901DAF /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		6A0D81581CD1AECD00901DAF /* LocationCate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationCate+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6A0D81591CD1AECD00901DAF /* LocationCate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCate.swift; sourceTree = "<group>"; };
-		6A0D815A1CD1AECD00901DAF /* Passenger+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Passenger+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6A0D815B1CD1AECD00901DAF /* Passenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
-		6A0D815C1CD1AECD00901DAF /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6A0D815D1CD1AECD00901DAF /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		6A0D818C1CD1F86100901DAF /* Airport-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Airport-Bridging-Header.h"; sourceTree = "<group>"; };
 		793239861CCE2AB2005A9D8A /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		7963409D1CD0052400E3C567 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -114,18 +90,6 @@
 		79F47DF31CB672B200D723C4 = {
 			isa = PBXGroup;
 			children = (
-				6A0D81521CD1AECD00901DAF /* Airport+CoreDataProperties.swift */,
-				6A0D81531CD1AECD00901DAF /* Airport.swift */,
-				6A0D81541CD1AECD00901DAF /* Beacon+CoreDataProperties.swift */,
-				6A0D81551CD1AECD00901DAF /* Beacon.swift */,
-				6A0D81561CD1AECD00901DAF /* Category+CoreDataProperties.swift */,
-				6A0D81571CD1AECD00901DAF /* Category.swift */,
-				6A0D81581CD1AECD00901DAF /* LocationCate+CoreDataProperties.swift */,
-				6A0D81591CD1AECD00901DAF /* LocationCate.swift */,
-				6A0D815A1CD1AECD00901DAF /* Passenger+CoreDataProperties.swift */,
-				6A0D815B1CD1AECD00901DAF /* Passenger.swift */,
-				6A0D815C1CD1AECD00901DAF /* Location+CoreDataProperties.swift */,
-				6A0D815D1CD1AECD00901DAF /* Location.swift */,
 				79F47DFE1CB672B200D723C4 /* Airport */,
 				79F47E131CB672B200D723C4 /* AirportTests */,
 				79F47DFD1CB672B200D723C4 /* Products */,
@@ -223,7 +187,7 @@
 				TargetAttributes = {
 					79F47DFB1CB672B200D723C4 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = EHB2EPC57Y;
+						DevelopmentTeam = 849G2S9K7N;
 					};
 					79F47E0F1CB672B200D723C4 = {
 						CreatedOnToolsVersion = 7.3;
@@ -323,24 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A0D81661CD1AECD00901DAF /* Passenger+CoreDataProperties.swift in Sources */,
-				6A0D815F1CD1AECD00901DAF /* Airport.swift in Sources */,
 				79E0AECC1CC95922007F1F98 /* CheckInViewController.swift in Sources */,
 				79B50AB91CC96F19005A2CF9 /* SecurityViewController.swift in Sources */,
 				79F47E001CB672B200D723C4 /* AppDelegate.swift in Sources */,
 				6A0D81501CD1A72E00901DAF /* Model.xcdatamodeld in Sources */,
-				6A0D81601CD1AECD00901DAF /* Beacon+CoreDataProperties.swift in Sources */,
 				793239871CCE2AB2005A9D8A /* ServiceViewController.swift in Sources */,
-				6A0D81621CD1AECD00901DAF /* Category+CoreDataProperties.swift in Sources */,
 				79C2E69A1CCFB9B300B82DB3 /* QRCodeScannerViewController.swift in Sources */,
-				6A0D81641CD1AECD00901DAF /* LocationCate+CoreDataProperties.swift in Sources */,
-				6A0D81631CD1AECD00901DAF /* Category.swift in Sources */,
-				6A0D81651CD1AECD00901DAF /* LocationCate.swift in Sources */,
-				6A0D81671CD1AECD00901DAF /* Passenger.swift in Sources */,
-				6A0D81691CD1AECD00901DAF /* Location.swift in Sources */,
-				6A0D81681CD1AECD00901DAF /* Location+CoreDataProperties.swift in Sources */,
-				6A0D815E1CD1AECD00901DAF /* Airport+CoreDataProperties.swift in Sources */,
-				6A0D81611CD1AECD00901DAF /* Beacon.swift in Sources */,
 				79C2E69C1CCFBD2C00B82DB3 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,10 +406,14 @@
 			baseConfigurationReference = 50E38A7168F42C680E8410FA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Airport/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RubingMao.Airport;
+				PRODUCT_BUNDLE_IDENTIFIER = happiness.Airport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Airport/Airport-Bridging-Header.h";
 			};
 			name = Debug;
@@ -467,10 +423,14 @@
 			baseConfigurationReference = F6EA9AE89BBA92F1D29B25AB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Airport/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RubingMao.Airport;
+				PRODUCT_BUNDLE_IDENTIFIER = happiness.Airport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Airport/Airport-Bridging-Header.h";
 			};
 			name = Release;

@@ -13,7 +13,6 @@ import UIKit
 //1)Estimote Indoor Location SDK : https://github.com/Estimote/iOS-Indoor-SDK
 //2)The SDK is available as EstimoteIndoorSDK in CocoaPods: https://cocoapods.org
 class MapViewController : UIViewController, UIScrollViewDelegate, EILIndoorLocationManagerDelegate {
-    
     //Mark : scollView and imageView variables
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -27,7 +26,7 @@ class MapViewController : UIViewController, UIScrollViewDelegate, EILIndoorLocat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         //Mark : scollView and imageView setting
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 5.0
@@ -51,6 +50,28 @@ class MapViewController : UIViewController, UIScrollViewDelegate, EILIndoorLocat
                 self.locationView.locationBorderThickness = 3
                 self.locationView.drawLocation(location) //drawing where you are
                 
+                //Mark : Inside of the airport
+                //context is the object used for drawings
+                //                let context = UIGraphicsGetCurrentContext()
+                //                CGContextSetLineWidth(context, 3.0)
+                //                CGContextSetStrokeColorWithColor(context, UIColor.darkGrayColor().CGColor)
+                //
+                //                //Creat a path
+                //                CGContextMoveToPoint(context, 0, 0)
+                //                CGContextAddLineToPoint(context, 0, 200)
+                
+                //Actually darw the path
+                //CGContextStrokePath(context)
+                //UIView.drawRect(locationView)
+                
+                let viewHorizontalLine = UIView.init(frame: CGRect(x: 55, y: 220, width: 210, height: 4))
+                viewHorizontalLine.backgroundColor = UIColor.darkGrayColor()
+                self.view.addSubview(viewHorizontalLine)
+                
+                let viewVerticalLine = UIView.init(frame: CGRect(x: 155, y: 100, width: 4, height: 230))
+                viewVerticalLine.backgroundColor = UIColor.darkGrayColor()
+                self.view.addSubview(viewVerticalLine)
+                
                 // Do we need these points?
                 let startingPointImg = UIImage(named: "startingPoint")
                 let startingPoint = UIImageView.init(frame: CGRectMake(0,0,30,30)) //It represents the dimensions of width and height.
@@ -59,6 +80,18 @@ class MapViewController : UIViewController, UIScrollViewDelegate, EILIndoorLocat
                 let destinationPointImg = UIImage(named: "destinationPoint")
                 let destinationPoint = UIImageView.init(frame: CGRectMake(0,0,50,50)) //Itrepresents the dimensions of width and height.
                 destinationPoint.image = destinationPointImg
+                
+                //Reference : http://stackoverflow.com/questions/34431459/ios-swift-how-to-add-pinpoint-to-map-on-touch-and-get-detailed-address-of-th
+                //let aSelector : Selector = "mapTapped: "
+                var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapping:")
+                //let tappingRecognizer = UITapGestureRecognizer(target: self, action: aSelector)
+                startingPoint.userInteractionEnabled = true
+                destinationPoint.userInteractionEnabled = true
+                //tappingRecognizer.numberOfTapsRequired = 1
+                //self.view.addGestureRecognizer(tappingRecognizer)
+                //startingPoint.addGestureRecognizer(tappingRecognizer)
+                self.locationView.userInteractionEnabled = true
+                self.locationView.addGestureRecognizer(tap)
                 
                 //locationView.drawObjectInBackground(UIView, withPosition: <#T##EILOrientedPoint#>, identifier: "map") //tells empty or not
                 //locationView.drawObjectInForeground(<#T##object: UIView##UIView#>, withPosition: <#T##EILOrientedPoint#>, identifier: <#T##String#>)
@@ -74,6 +107,11 @@ class MapViewController : UIViewController, UIScrollViewDelegate, EILIndoorLocat
                 print("can't fetch location: \(error)")
             }
         }
+    }
+    
+    func tapping(img: AnyObject){
+        displayRoute()
+        print("route added")
     }
     
     //Mark : displaying the route
@@ -116,6 +154,7 @@ class MapViewController : UIViewController, UIScrollViewDelegate, EILIndoorLocat
         }
         print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f, accuracy: %@",
             position.x, position.y, position.orientation, accuracy))
+        currentPosition = position
         self.locationView.updatePosition(position)
     }
     
