@@ -2,7 +2,7 @@
 //  Passenger+CoreDataProperties.swift
 //  
 //
-//  Created by iosdev on 29.4.2016.
+//  Created by iosdev on 30.4.2016.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

@@ -22,5 +22,6 @@ class SecurityViewController : UIViewController {
         webView.loadHTMLString("<iframe width=\"\(webView.frame.width)\" height=\"\(webView.frame.height)\" src=\"\(youtubeUrl)?playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
         
     }
+    
 
 }

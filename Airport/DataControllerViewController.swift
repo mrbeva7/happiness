@@ -1,127 +1,28 @@
 //
-//  serviceViewController.swift
+//  DataControllerViewController.swift
 //  Airport
 //
-//  Created by RUBING MAO on 4/25/16.
+//  Created by iosdev on 29.4.2016.
 //  Copyright © 2016 RUBING MAO. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import CoreData
 
-class ServiceViewController : UIViewController, UITextFieldDelegate {
-    
-    var managedObjectContext : NSManagedObjectContext!
-    var services:[NSManagedObject]!
-    
-    override func viewDidLoad()
-    {
+class DataControllerViewController: UIViewController {
+
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.title = "Airport"
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        managedObjectContext = appDelegate.managedObjectContext
-        
-        //self.fetchEntries()
-        addDataToService()
-        addDataToArea()
-        addDataToBeacon()
-        addDataToLocation()
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    
-//    override func viewWillAppear(animated: Bool)
-//    {
-//        super.viewWillAppear(animated)
-//        self.fetchEntries()
-//    }
-//    
-    
-//    func fetchEntries()
-//    {
-//        let fetchRequest = NSFetchRequest(entityName: "Service")
-//        
-//        do{
-//            let entryObjects = try managedObjectContext.executeFetchRequest(fetchRequest)
-//            self.services = entryObjects as! [NSManagedObject]
-//        }catch let error as NSError{
-//            print("could not fetch entries \(error), \(error.userInfo)")
-//        }
-//        self.tableView.reloadData()
-//    }
-//    
-////    // MARK: - Target action
-////    
-////    @IBAction func composeDidClick(sender: AnyObject)
-////    {
-////        self.performSegueWithIdentifier("Show Composer", sender: nil)
-////    }
-//    
-//    // MARK: - UITableViewDatasource
-//    
-//    // 11 Populate entries into table view
-//    
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
-//    {
-//        return 1
-//    }
-//    
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-//    {
-//        return self.services.count
-//    }
-//    
-//    //indexPath has info of which section and which row
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-//    {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("Service Cell", forIndexPath: indexPath)
-//        
-//        let service = services[indexPath.row]
-//        cell.textLabel?.text = service.valueForKey("name") as? String
-//
-//        return cell
-//    }
-//    
-//    
-//    //MARK: - UITableViewDelegate
-//    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//        let service = self.services[indexPath.row]
-//        self.performSegueWithIdentifier("Show Composer", sender: service)
-//    }
-//    
-//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        return true
-//    }
-//    
-//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if editingStyle == .Delete{
-//            let service = self.services[indexPath.row]
-//            self.managedObjectContext.deleteObject(service)
-//            self.services.removeAtIndex(indexPath.row)
-//            
-//            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-//            
-//            do{
-//                try self.managedObjectContext.save()
-//            }catch let error as NSError{
-//                print("Cannot delete object: \(error), \(error.localizedDescription)")
-//            }
-//        }
-//    }
-    // MARK: - Navigation
-    
-    // 13 - give the compose vc its entry
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-//    {
-//        if segue.identifier == "serviceToBoarding" {
-//            let locationTableViewController = segue.destinationViewController as! LocationTableViewController
-//                locationTableViewController. = sender as? NSManagedObject
-//        }
-//    }
-    
-    // Core Data
+
     // MARK: Add Data to Service
     // Services(type) for the airport
     func addDataToService(){
@@ -276,24 +177,15 @@ class ServiceViewController : UIViewController, UITextFieldDelegate {
         print(newLocation)
         
     }
-
     
-    //    @IBOutlet weak var departureTimeTextField: UITextField!
-    
-    //    @IBOutlet weak var departureTimeTextField: UITextField!
-    
-    // Handle the text field’s user input through delegate callbacks.
-    //        departureTimeTextField.delegate = self
+    /*
+    // MARK: - Navigation
 
-
-//    func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        // Hide the keyboard.
-//        textField.resignFirstResponder()
-//        return true
-//    }
-//
-//    func textFieldDidEndEditing(textField: UITextField) {
-//        departureTimeLabel.text = textField.text
-//    }
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
