@@ -1,8 +1,8 @@
 //
-//  Category+CoreDataProperties.swift
+//  Service+CoreDataProperties.swift
 //  
 //
-//  Created by iosdev on 29.4.2016.
+//  Created by iosdev on 30.4.2016.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,10 +12,10 @@
 import Foundation
 import CoreData
 
-extension Category {
+extension Service {
 
-    @NSManaged var categoryID: NSNumber?
     @NSManaged var name: String?
-    @NSManaged var cateLoc: NSSet?
+    @NSManaged var serviceID: NSNumber?
+    @NSManaged var serviceLoc: NSSet?
 
 }

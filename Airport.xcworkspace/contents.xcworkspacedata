@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:LocationCate+CoreDataProperties.swift">
+      location = "group:Beacon+CoreDataProperties.swift">
    </FileRef>
    <FileRef
-      location = "group:LocationCate.swift">
+      location = "group:Beacon.swift">
    </FileRef>
    <FileRef
       location = "group:Passenger+CoreDataProperties.swift">
@@ -14,16 +14,10 @@
       location = "group:Passenger.swift">
    </FileRef>
    <FileRef
-      location = "group:Beacon+CoreDataProperties.swift">
+      location = "group:Service+CoreDataProperties.swift">
    </FileRef>
    <FileRef
-      location = "group:Beacon.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Category+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Category.swift">
+      location = "group:Service.swift">
    </FileRef>
    <FileRef
       location = "group:Airport+CoreDataProperties.swift">
@@ -36,6 +30,12 @@
    </FileRef>
    <FileRef
       location = "group:Location.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Area+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Area.swift">
    </FileRef>
    <FileRef
       location = "group:Airport.xcodeproj">

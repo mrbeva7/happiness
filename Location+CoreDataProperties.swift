@@ -2,7 +2,7 @@
 //  Location+CoreDataProperties.swift
 //  
 //
-//  Created by iosdev on 29.4.2016.
+//  Created by iosdev on 30.4.2016.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,13 +17,12 @@ extension Location {
     @NSManaged var locationID: NSNumber?
     @NSManaged var locationLevel: NSNumber?
     @NSManaged var name: String?
-    @NSManaged var type: NSNumber?
     @NSManaged var x: NSNumber?
     @NSManaged var y: NSNumber?
     @NSManaged var locationAirport: Airport?
+    @NSManaged var locationAreaLevel: Area?
     @NSManaged var locationBeacon: Beacon?
-    @NSManaged var locationCateLevel: LocationCate?
     @NSManaged var locationPas: Passenger?
-    @NSManaged var locationType: Category?
+    @NSManaged var locationService: Service?
 
 }

@@ -1,8 +1,8 @@
 //
-//  LocationCate+CoreDataProperties.swift
+//  Area+CoreDataProperties.swift
 //  
 //
-//  Created by iosdev on 29.4.2016.
+//  Created by iosdev on 30.4.2016.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,11 +12,10 @@
 import Foundation
 import CoreData
 
-extension LocationCate {
+extension Area {
 
-    @NSManaged var level: String?
-    @NSManaged var locationCateID: NSNumber?
-    @NSManaged var name: String?
+    @NSManaged var area: String?
+    @NSManaged var areaID: NSNumber?
     @NSManaged var locationLevel: NSSet?
 
 }
