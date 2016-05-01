@@ -8,10 +8,22 @@
       location = "group:Airport.swift">
    </FileRef>
    <FileRef
+      location = "group:Beacon+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Beacon.swift">
+   </FileRef>
+   <FileRef
       location = "group:Location+CoreDataProperties.swift">
    </FileRef>
    <FileRef
       location = "group:Location.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Passenger+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Passenger.swift">
    </FileRef>
    <FileRef
       location = "group:Area+CoreDataProperties.swift">
@@ -20,22 +32,10 @@
       location = "group:Area.swift">
    </FileRef>
    <FileRef
-      location = "group:Beacon+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Beacon.swift">
-   </FileRef>
-   <FileRef
       location = "group:Service+CoreDataProperties.swift">
    </FileRef>
    <FileRef
       location = "group:Service.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Passenger+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Passenger.swift">
    </FileRef>
    <FileRef
       location = "group:Airport.xcodeproj">

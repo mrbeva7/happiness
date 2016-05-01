@@ -586,7 +586,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="1ka-sm-Cis"/>
         <segue reference="Gja-k8-27E"/>
-        <segue reference="EzA-Hl-GOJ"/>
         <segue reference="0D0-3c-Wya"/>
+        <segue reference="EzA-Hl-GOJ"/>
     </inferredMetricsTieBreakers>
 </document>

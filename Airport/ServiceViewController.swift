@@ -19,8 +19,27 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
     
     var managedObjectContext : NSManagedObjectContext!
     var services:[NSManagedObject]!
+    var currentDetailViewController: UIViewController
     @IBOutlet weak var ServiceListTable: UITableView!
     
+    //Reference(init vs viewDidLoad) http://stackoverflow.com/questions/14722300/init-method-vs-a-viewdidload-type-method
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        currentDetailViewController = UIViewController()
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        print("Let's see we're getting a data in init")
+    }
+    
+    convenience init() {
+        self.init(nibName: nil, bundle: nil)
+        print("we are in convenience init")
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        currentDetailViewController = UIViewController()
+        super.init(coder:aDecoder)!
+        print("we are in required init")
+    }
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -31,21 +50,22 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         //self.title = "Airport"
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         managedObjectContext = appDelegate.managedObjectContext
-        print("managedObjectContext",managedObjectContext)
-        print("managedObjectContext.persistentStoreCoordinator?.managedObjectModel.entities", managedObjectContext.persistentStoreCoordinator?.managedObjectModel.entities)
-        //self.fetchServices()
+        //print("managedObjectContext",managedObjectContext)
+        //print("managedObjectContext.persistentStoreCoordinator?.managedObjectModel.entities", managedObjectContext.persistentStoreCoordinator?.managedObjectModel.entities)
+        //print("printing services.count",services.count)
         addDataToService()
         addDataToArea()
         addDataToBeacon()
         addDataToLocation()
-    }
-    
-    
-    override func viewWillAppear(animated: Bool)
-    {
-        super.viewWillAppear(animated)
         self.fetchServices()
     }
+    
+    //Reference(viewDidLoad vs viewWillAppear) :http://stackoverflow.com/questions/17362095/about-viewcontrollers-viewdidload-and-viewwillappear-methods
+    
+//    override func viewWillAppear(animated: Bool)
+//    {
+//        super.viewWillAppear(animated)
+//    }
     
     
     func fetchServices()
@@ -53,15 +73,14 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         //let userService: NSString = "Service"
         let fetchRequest = NSFetchRequest(entityName: "Service")
             
-            let moc = self.managedObjectContext
-            print("Entities: \(moc.persistentStoreCoordinator?.managedObjectModel.entitiesByName)")
-            let obj = NSEntityDescription.insertNewObjectForEntityForName("Service",
-                                                                          inManagedObjectContext:moc)
-            print(obj)
+            //let moc = self.managedObjectContext
+            //print("Entities: \(moc.persistentStoreCoordinator?.managedObjectModel.entitiesByName)")
+            //let obj = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext:moc)
+            //print(obj)
         
         do{
-            let entryObjects = try managedObjectContext.executeFetchRequest(fetchRequest)
-            self.services = entryObjects as! [NSManagedObject]
+            let serviceObjects = try managedObjectContext.executeFetchRequest(fetchRequest)
+            self.services = serviceObjects as! [NSManagedObject]
         }catch let error as NSError{
             print("could not fetch entries \(error), \(error.userInfo)")
         }
@@ -146,49 +165,73 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext
-        print("context", context)
-        print("managedObjectContet", managedObjectContext)
-        print("appDel.managedObjectContet", appDel.managedObjectContext)
+       // print("context", context)
+       // print("managedObjectContet", managedObjectContext)
+       // print("appDel.managedObjectContet", appDel.managedObjectContext)
         
         //inManagedObjectContext: context
         
-        var newCategory = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext) as! NSManagedObject
+        var servicesList = [NSManagedObject]()
+        let newService1 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext) // as! NSManagedObject
         
-        newCategory.setValue(1, forKey: "serviceID")
-        newCategory.setValue("Restaurants", forKey: "name")
+        newService1.setValue(1, forKey: "serviceID")
+        newService1.setValue("Restaurants", forKey: "name")
+        //try! context.save()
+        servicesList.append(newService1)
         
-        newCategory.setValue(2, forKey: "serviceID")
-        newCategory.setValue("Shops", forKey: "name")
+         let newService2 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        newService2.setValue(2, forKey: "serviceID")
+        newService2.setValue("Shops", forKey: "name")
+        //try! context.save()
+        servicesList.append(newService2)
         
-        newCategory.setValue(3, forKey: "serviceID")
-        newCategory.setValue("Toilet", forKey: "name")
+        let newService3 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        newService3.setValue(3, forKey: "serviceID")
+        newService3.setValue("Toilet", forKey: "name")
+        servicesList.append(newService3)
         
-        newCategory.setValue(4, forKey: "serviceID")
-        newCategory.setValue("SmokingArea", forKey: "name")
         
-        newCategory.setValue(5, forKey: "serviceID")
-        newCategory.setValue("Playground", forKey: "name")
+        let newService4 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        newService4.setValue(4, forKey: "serviceID")
+        newService4.setValue("SmokingArea", forKey: "name")
+        servicesList.append(newService4)
         
-        newCategory.setValue(6, forKey: "serviceID")
-        newCategory.setValue("Powerstation", forKey: "name")
+        let newService5 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        newService5.setValue(5, forKey: "serviceID")
+        newService5.setValue("Playground", forKey: "name")
+        servicesList.append(newService5)
         
-        newCategory.setValue(7, forKey: "serviceID")
-        newCategory.setValue("CurrencyExchange", forKey: "name")
+        let newService6 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        newService6.setValue(6, forKey: "serviceID")
+        newService6.setValue("Powerstation", forKey: "name")
+        servicesList.append(newService6)
         
-        newCategory.setValue(8, forKey: "serviceID")
-        newCategory.setValue("Info", forKey: "name")
+        let newService7 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        newService7.setValue(7, forKey: "serviceID")
+        newService7.setValue("CurrencyExchanges", forKey: "name")
+        servicesList.append(newService7)
         
-        newCategory.setValue(9, forKey: "serviceID")
-        newCategory.setValue("Location", forKey: "name")
+        let newService8 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        newService8.setValue(8, forKey: "serviceID")
+        newService8.setValue("Info", forKey: "name")
+        servicesList.append(newService8)
         
-        newCategory.setValue(10, forKey: "serviceID")
-        newCategory.setValue("Terminal", forKey: "name")
+        let newService9 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        newService9.setValue(9, forKey: "serviceID")
+        newService9.setValue("Location", forKey: "name")
+        servicesList.append(newService9)
         
-        newCategory.setValue(11, forKey: "serviceID")
-        newCategory.setValue("Gate", forKey: "name")
+        let newService10 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        newService10.setValue(10, forKey: "serviceID")
+        newService10.setValue("Terminal", forKey: "name")
+        servicesList.append(newService10)
+        
+        let newService11 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        newService11.setValue(11, forKey: "serviceID")
+        newService11.setValue("Gate", forKey: "name")
+        servicesList.append(newService11)
         
         try! context.save()
-        print(newCategory)
         
     }
     
