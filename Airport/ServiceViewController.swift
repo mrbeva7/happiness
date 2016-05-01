@@ -171,65 +171,65 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         
         //inManagedObjectContext: context
         
-        var servicesList = [NSManagedObject]()
+        //var servicesList = [NSManagedObject]()
         let newService1 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext) // as! NSManagedObject
         
         newService1.setValue(1, forKey: "serviceID")
         newService1.setValue("Restaurants", forKey: "name")
         //try! context.save()
-        servicesList.append(newService1)
+        //servicesList.append(newService1)
         
          let newService2 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService2.setValue(2, forKey: "serviceID")
         newService2.setValue("Shops", forKey: "name")
         //try! context.save()
-        servicesList.append(newService2)
+        //servicesList.append(newService2)
         
         let newService3 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService3.setValue(3, forKey: "serviceID")
         newService3.setValue("Toilet", forKey: "name")
-        servicesList.append(newService3)
+        //servicesList.append(newService3)
         
         
         let newService4 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService4.setValue(4, forKey: "serviceID")
         newService4.setValue("SmokingArea", forKey: "name")
-        servicesList.append(newService4)
+        //servicesList.append(newService4)
         
         let newService5 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService5.setValue(5, forKey: "serviceID")
         newService5.setValue("Playground", forKey: "name")
-        servicesList.append(newService5)
+        //servicesList.append(newService5)
         
         let newService6 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService6.setValue(6, forKey: "serviceID")
         newService6.setValue("Powerstation", forKey: "name")
-        servicesList.append(newService6)
+        //servicesList.append(newService6)
         
         let newService7 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService7.setValue(7, forKey: "serviceID")
         newService7.setValue("CurrencyExchanges", forKey: "name")
-        servicesList.append(newService7)
+        //servicesList.append(newService7)
         
         let newService8 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService8.setValue(8, forKey: "serviceID")
         newService8.setValue("Info", forKey: "name")
-        servicesList.append(newService8)
+        //servicesList.append(newService8)
         
         let newService9 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService9.setValue(9, forKey: "serviceID")
         newService9.setValue("Location", forKey: "name")
-        servicesList.append(newService9)
+        //servicesList.append(newService9)
         
         let newService10 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService10.setValue(10, forKey: "serviceID")
         newService10.setValue("Terminal", forKey: "name")
-        servicesList.append(newService10)
+        //servicesList.append(newService10)
         
         let newService11 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService11.setValue(11, forKey: "serviceID")
         newService11.setValue("Gate", forKey: "name")
-        servicesList.append(newService11)
+        //servicesList.append(newService11)
         
         try! context.save()
         
