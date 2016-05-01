@@ -8,25 +8,47 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class ServiceViewController : UIViewController, UITextFieldDelegate {
     
-    //    @IBOutlet weak var departureTimeTextField: UITextField!
+    @IBOutlet var PausePlay: UIButton!
+ 
+    var BackgroundAudio = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Nhumo_Mind, Body and Soul", ofType: "mp3")!)
     
-    //    @IBOutlet weak var departureTimeTextField: UITextField!
+    var BackgroundAudioPlayer: AVAudioPlayer!
     
-    // Handle the text field’s user input through delegate callbacks.
-    //        departureTimeTextField.delegate = self
 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        do {
+            try BackgroundAudioPlayer = AVAudioPlayer(contentsOfURL: BackgroundAudio)
+            BackgroundAudioPlayer.play()
+        } catch {
+            print("error")
+        }
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        BackgroundAudioPlayer.stop()
+    }
 
-//    func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        // Hide the keyboard.
-//        textField.resignFirstResponder()
-//        return true
-//    }
-//
-//    func textFieldDidEndEditing(textField: UITextField) {
-//        departureTimeLabel.text = textField.text
-//    }
+    @IBAction func PausePlay(sender: AnyObject) {
+        
+        if (BackgroundAudioPlayer.playing == true){
+            BackgroundAudioPlayer.stop()
+            //PausePlay.setImage("play", forState: UIControlState.Normal)
+            PausePlay.setImage(UIImage(named: "play"), forState: .Normal)
+        } else {
+            BackgroundAudioPlayer.play()
+            //PausePlay.setImage("pause", forState: UIControlState.Normal)
+            PausePlay.setImage(UIImage(named: "pause"), forState: .Normal)
+        }
+        
+    }
 
 }
