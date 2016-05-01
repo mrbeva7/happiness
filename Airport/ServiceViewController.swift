@@ -10,20 +10,30 @@ import Foundation
 import UIKit
 import CoreData
 
-class ServiceViewController : UIViewController, UITextFieldDelegate {
+
+//Reference (UIViewController vs UITableView) :
+//1) http://stackoverflow.com/questions/9375903/how-to-interact-with-uitableview-in-uiviewcontroller
+//2) http://stackoverflow.com/questions/27372595/issues-adding-uitableview-inside-a-uiviewcontroller-in-swift
+
+class ServiceViewController : UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     var managedObjectContext : NSManagedObjectContext!
     var services:[NSManagedObject]!
+    @IBOutlet weak var ServiceListTable: UITableView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.ServiceListTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Service Cell")
+        ServiceListTable.delegate = self
+        ServiceListTable.dataSource = self
         
         //self.title = "Airport"
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         managedObjectContext = appDelegate.managedObjectContext
-        
-        //self.fetchEntries()
+        print("managedObjectContext",managedObjectContext)
+        print("managedObjectContext.persistentStoreCoordinator?.managedObjectModel.entities", managedObjectContext.persistentStoreCoordinator?.managedObjectModel.entities)
+        //self.fetchServices()
         addDataToService()
         addDataToArea()
         addDataToBeacon()
@@ -31,60 +41,67 @@ class ServiceViewController : UIViewController, UITextFieldDelegate {
     }
     
     
-//    override func viewWillAppear(animated: Bool)
-//    {
-//        super.viewWillAppear(animated)
-//        self.fetchEntries()
-//    }
-//    
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        self.fetchServices()
+    }
     
-//    func fetchEntries()
+    
+    func fetchServices()
+        {
+        //let userService: NSString = "Service"
+        let fetchRequest = NSFetchRequest(entityName: "Service")
+            
+            let moc = self.managedObjectContext
+            print("Entities: \(moc.persistentStoreCoordinator?.managedObjectModel.entitiesByName)")
+            let obj = NSEntityDescription.insertNewObjectForEntityForName("Service",
+                                                                          inManagedObjectContext:moc)
+            print(obj)
+        
+        do{
+            let entryObjects = try managedObjectContext.executeFetchRequest(fetchRequest)
+            self.services = entryObjects as! [NSManagedObject]
+        }catch let error as NSError{
+            print("could not fetch entries \(error), \(error.userInfo)")
+        }
+        self.ServiceListTable.reloadData()
+    }
+    
+//    // MARK: - Target action
+//    
+//    @IBAction func composeDidClick(sender: AnyObject)
 //    {
-//        let fetchRequest = NSFetchRequest(entityName: "Service")
-//        
-//        do{
-//            let entryObjects = try managedObjectContext.executeFetchRequest(fetchRequest)
-//            self.services = entryObjects as! [NSManagedObject]
-//        }catch let error as NSError{
-//            print("could not fetch entries \(error), \(error.userInfo)")
-//        }
-//        self.tableView.reloadData()
+//        self.performSegueWithIdentifier("Show Composer", sender: nil)
 //    }
-//    
-////    // MARK: - Target action
-////    
-////    @IBAction func composeDidClick(sender: AnyObject)
-////    {
-////        self.performSegueWithIdentifier("Show Composer", sender: nil)
-////    }
-//    
-//    // MARK: - UITableViewDatasource
-//    
-//    // 11 Populate entries into table view
-//    
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
-//    {
-//        return 1
-//    }
-//    
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-//    {
-//        return self.services.count
-//    }
-//    
-//    //indexPath has info of which section and which row
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-//    {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("Service Cell", forIndexPath: indexPath)
-//        
-//        let service = services[indexPath.row]
-//        cell.textLabel?.text = service.valueForKey("name") as? String
-//
-//        return cell
-//    }
-//    
-//    
-//    //MARK: - UITableViewDelegate
+    
+    // MARK: - UITableViewDatasource
+    
+    // 11 Populated services into table view
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return self.services.count
+    }
+    
+    //indexPath has info of which section and which row
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Service Cell", forIndexPath: indexPath)
+        
+        let service = services[indexPath.row]
+        cell.textLabel?.text = service.valueForKey("name") as? String
+        
+        return cell
+    }
+    
+    
+    //MARK: - UITableViewDelegate
 //    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
 //        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
 //        let service = self.services[indexPath.row]
@@ -110,9 +127,10 @@ class ServiceViewController : UIViewController, UITextFieldDelegate {
 //            }
 //        }
 //    }
-    // MARK: - Navigation
     
-    // 13 - give the compose vc its entry
+     //MARK: - Navigation
+//    
+//     13 - give the compose vc its entry
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
 //    {
 //        if segue.identifier == "serviceToBoarding" {
@@ -128,8 +146,13 @@ class ServiceViewController : UIViewController, UITextFieldDelegate {
         
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext
+        print("context", context)
+        print("managedObjectContet", managedObjectContext)
+        print("appDel.managedObjectContet", appDel.managedObjectContext)
         
-        var newCategory = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: context) as! NSManagedObject
+        //inManagedObjectContext: context
+        
+        var newCategory = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext) as! NSManagedObject
         
         newCategory.setValue(1, forKey: "serviceID")
         newCategory.setValue("Restaurants", forKey: "name")
@@ -168,7 +191,6 @@ class ServiceViewController : UIViewController, UITextFieldDelegate {
         print(newCategory)
         
     }
-    
     
     // MARK: Add Data to AREA
     // Level for the places in the airport

@@ -58,6 +58,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="l5J-B8-zFA" id="hb9-TN-btF"/>
+                                    <outlet property="delegate" destination="l5J-B8-zFA" id="IC5-r1-Yaw"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,6 +72,9 @@
                         </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="ServiceListTable" destination="0Qh-Zc-WOS" id="gh6-cW-s9O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgw-Xq-GPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="pAx-b5-zAe">
@@ -577,9 +584,9 @@
         <image name="blurrysky" width="960" height="270"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0D0-3c-Wya"/>
-        <segue reference="Gja-k8-27E"/>
         <segue reference="1ka-sm-Cis"/>
+        <segue reference="Gja-k8-27E"/>
         <segue reference="EzA-Hl-GOJ"/>
+        <segue reference="0D0-3c-Wya"/>
     </inferredMetricsTieBreakers>
 </document>
