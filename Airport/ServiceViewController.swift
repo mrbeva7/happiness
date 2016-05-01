@@ -165,14 +165,10 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext
-       // print("context", context)
-       // print("managedObjectContet", managedObjectContext)
-       // print("appDel.managedObjectContet", appDel.managedObjectContext)
-        
-        //inManagedObjectContext: context
+    
         
         //var servicesList = [NSManagedObject]()
-        let newService1 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext) // as! NSManagedObject
+        let newService1 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         
         newService1.setValue(1, forKey: "serviceID")
         newService1.setValue("Restaurants", forKey: "name")
@@ -323,6 +319,7 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         newLocation.setValue(2, forKey: "x")
         newLocation.setValue(3, forKey: "y")
         
+        
         //SHOP : level 3
         newLocation.setValue(3, forKey: "locationID")
         newLocation.setValue(3, forKey: "locationLevel")
@@ -341,24 +338,5 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         print(newLocation)
         
     }
-
-    
-    //    @IBOutlet weak var departureTimeTextField: UITextField!
-    
-    //    @IBOutlet weak var departureTimeTextField: UITextField!
-    
-    // Handle the text field’s user input through delegate callbacks.
-    //        departureTimeTextField.delegate = self
-
-
-//    func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        // Hide the keyboard.
-//        textField.resignFirstResponder()
-//        return true
-//    }
-//
-//    func textFieldDidEndEditing(textField: UITextField) {
-//        departureTimeLabel.text = textField.text
-//    }
 
 }

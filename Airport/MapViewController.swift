@@ -23,7 +23,7 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
     var location: EILLocation!
     var currentPosition: EILOrientedPoint!
     var routeLayer: CAShapeLayer! //It draws a cubic Bezier spline in its coordinate space
-    var finalPoint: CGPoint!
+    var finalPosition: EILOrientedPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,22 +73,18 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
                 viewVerticalLine.backgroundColor = UIColor.darkGrayColor()
                 self.view.addSubview(viewVerticalLine)
                 
-                // Do we need these points?
                 let startingPointImg = UIImage(named: "startingPoint")
                 let startingPoint = UIImageView.init(frame: CGRectMake(0,0,30,30)) //It represents the dimensions of width and height.
                 startingPoint.image = startingPointImg
                 
-                let destinationPointImg = UIImage(named: "destinationPoint")
-                let destinationPoint = UIImageView.init(frame: CGRectMake(0,0,50,50)) //Itrepresents the dimensions of width and height.
-                destinationPoint.image = destinationPointImg
+            
                 
                 //locationView.drawObjectInBackground(UIView, withPosition: <#T##EILOrientedPoint#>, identifier: "map") //tells empty or not
                 //locationView.drawObjectInForeground(<#T##object: UIView##UIView#>, withPosition: <#T##EILOrientedPoint#>, identifier: <#T##String#>)
                 
                 let startingP = EILOrientedPoint(x: 0.5, y:0.5, orientation: 0)
-                let destinationP = EILOrientedPoint(x: 3, y:0.5, orientation: 0)
                 self.locationView.drawObjectInBackground(startingPoint, withPosition: startingP, identifier: "startP")
-                self.locationView.drawObjectInBackground(destinationPoint, withPosition: destinationP, identifier: "destinationP")
+               
                 self.locationManager.startPositionUpdatesForLocation(self.location)
                 
                 //Reference : http://stackoverflow.com/questions/34431459/ios-swift-how-to-add-pinpoint-to-map-on-touch-and-get-detailed-address-of-th
@@ -108,8 +104,8 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
     }
     
     func tapping(sender:UITapGestureRecognizer){
-        
-        self.finalPoint = sender.locationInView(locationView)
+        let finalPoint = locationView.calculateRealPointFromPicturePoint(sender.locationInView(locationView))
+        self.finalPosition = EILOrientedPoint(x: finalPoint.x, y: finalPoint.y)
         displayRoute()
         print(finalPoint)
     }
@@ -132,10 +128,17 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
         let startPoint = locationView.calculatePicturePointFromRealPoint(currentPosition)
         route.moveToPoint(startPoint)
         
+        let destinationPointImg = UIImage(named: "destinationPoint")
+        let destinationPoint = UIImageView.init(frame: CGRectMake(0,0,50,50)) //Itrepresents the dimensions of width and height.
+        destinationPoint.image = destinationPointImg
+        let destinationP = EILOrientedPoint(x : finalPosition.x, y:finalPosition.y, orientation: 0)
+        self.locationView.drawObjectInBackground(destinationPoint, withPosition: destinationP, identifier: "destinationP")
+        
         //let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x :4, y:1.5, orientation: 0))
-//        let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x:finalPoint.x, y:finalPoint.y, orientation: 0))
-        route.addLineToPoint(CGPoint(x:finalPoint.x, y:startPoint.y))
-        route.addLineToPoint(finalPoint)
+        //let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x:finalPoint.x, y:finalPoint.y, orientation: 0))
+        //route.addLineToPoint(CGPoint(x:finalPoint.x, y:startPoint.y))
+        route.addLineToPoint(CGPoint(x: CGFloat (finalPosition.x), y:startPoint.y))
+        route.addLineToPoint(CGPoint(x: CGFloat (finalPosition.x), y:CGFloat (finalPosition.y)))
         
         if routeLayer != nil {
             routeLayer.removeFromSuperlayer()
