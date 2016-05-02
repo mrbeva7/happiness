@@ -170,19 +170,5 @@ class CheckInViewController : UIViewController, UITextFieldDelegate {
         //Mark: Data delegate
         pasBoardingT?.delegate = self
     }
+}
     
-//    func setTime(sender: UIDatePicker) {
-//        let timeFormatter = NSDateFormatter()
-//        timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-//        departureTimeLabel.text = timeFormatter.stringFromDate(sender.date)
-//    }
-//    
-//    @IBAction func timePicker(sender: UIDatePicker) {
-//        setTime(sender)
-    }
-    
-    //Alert message: ask user to turn on the bluetooth.
-    
-    //Alert message: ask user to give permission to turn on the camera
-    
-//}

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// Mark : Try to display the services with collectionView controller -> currently, it displays with a tableView
 class ServiceHomeViewController: UIViewController {
     
     //Mark: IBOutlets

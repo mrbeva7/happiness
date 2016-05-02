@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import AVFoundation
 
+//Mark : Try to get user input with barcode
 class BarCodeViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
     
     let captureSession = AVCaptureSession ()

@@ -13,6 +13,7 @@ import UIKit
 //1)Estimote Indoor Location SDK : https://github.com/Estimote/iOS-Indoor-SDK
 //2)The SDK is available as EstimoteIndoorSDK in CocoaPods: https://cocoapods.org
 class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate, EILIndoorLocationManagerDelegate {
+    
     //Mark : scollView and imageView variables
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -49,24 +50,11 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
                 self.locationView.showTrace = false
                 self.locationView.traceColor = UIColor.brownColor()
                 self.locationView.rotateOnPositionUpdate = false
-                //self.locationView.showBeacons = true
                 self.locationView.locationBorderColor = UIColor.darkGrayColor()
                 self.locationView.locationBorderThickness = 3
                 self.locationView.drawLocation(location) //drawing where you are
                 
                 //Mark : Inside of the airport
-                //context is the object used for drawings
-                //                let context = UIGraphicsGetCurrentContext()
-                //                CGContextSetLineWidth(context, 3.0)
-                //                CGContextSetStrokeColorWithColor(context, UIColor.darkGrayColor().CGColor)
-                //
-                //                //Creat a path
-                //                CGContextMoveToPoint(context, 0, 0)
-                //                CGContextAddLineToPoint(context, 0, 200)
-                
-                //Actually darw the path
-                //CGContextStrokePath(context)
-                //UIView.drawRect(locationView)
                 
                 let viewHorizontalLine = UIView.init(frame: CGRect(x: 55, y: 220, width: 210, height: 4))
                 viewHorizontalLine.backgroundColor = UIColor.darkGrayColor()
@@ -80,23 +68,13 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
                 let startingPoint = UIImageView.init(frame: CGRectMake(0,0,30,30)) //It represents the dimensions of width and height.
                 startingPoint.image = startingPointImg
                 
-            
-                
-                //locationView.drawObjectInBackground(UIView, withPosition: <#T##EILOrientedPoint#>, identifier: "map") //tells empty or not
-                //locationView.drawObjectInForeground(<#T##object: UIView##UIView#>, withPosition: <#T##EILOrientedPoint#>, identifier: <#T##String#>)
-                
                 let startingP = EILOrientedPoint(x: 0.5, y:0.5, orientation: 0)
-                self.locationView.drawObjectInBackground(startingPoint, withPosition: startingP, identifier: "startP")
+                //self.locationView.drawObjectInBackground(startingPoint, withPosition: startingP, identifier: "startP")
                
                 self.locationManager.startPositionUpdatesForLocation(self.location)
                 
-                //Reference : http://stackoverflow.com/questions/34431459/ios-swift-how-to-add-pinpoint-to-map-on-touch-and-get-detailed-address-of-th
+                //Mark : set tapGestureRecognizer
                 var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapping:")
-//                startingPoint.userInteractionEnabled = true
-//                destinationPoint.userInteractionEnabled = true
-                //tappingRecognizer.numberOfTapsRequired = 1
-                //self.view.addGestureRecognizer(tappingRecognizer)
-                //startingPoint.addGestureRecognizer(tappingRecognizer)
                 self.locationView.userInteractionEnabled = true
                 self.locationView.addGestureRecognizer(tap)
                 
@@ -114,28 +92,12 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
         print(finalPoint)
     }
     
-//    func tapping(img: AnyObject){
-//        displayRoute()
-//        print("route added")
-//    }
-    
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        var destPoint:CGPoint = CGPointZero
-//        if let touch = touches.first as? UITouch{
-//            destPoint = touch.locationView(self.view)
-//        }
-//    }
-    
-    //Mark : displaying the route
+    //Mark : displaying the route (drawing the path)
     func displayRoute(){
         var route = UIBezierPath()
         let startPoint = locationView.calculatePicturePointFromRealPoint(currentPosition)
         endPoint = locationView.calculatePicturePointFromRealPoint(finalPosition)
         route.moveToPoint(startPoint)
-        
-        //let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x :4, y:1.5, orientation: 0))
-        //let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x:finalPoint.x, y:finalPoint.y, orientation: 0))
-        //route.addLineToPoint(CGPoint(x:finalPoint.x, y:startPoint.y))
         route.addLineToPoint(CGPoint(x: endPoint.x, y:startPoint.y))
         route.addLineToPoint(endPoint)
         
@@ -152,6 +114,7 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
         
     }
     
+    //Mark : check whether the user tap the different destination or not. If it's a different location, it will move the destination point and the path according to the new destination position.
     func checkDestination() {
         let destinationPointImg = UIImage(named: "destinationPoint")
         destinationPoint = UIImageView.init(frame: CGRectMake(0,0,50,50)) //Itrepresents the dimensions of width and height.
@@ -181,6 +144,7 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
         }
         print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f, accuracy: %@",
             position.x, position.y, position.orientation, accuracy))
+        //Mark : set the current location
         currentPosition = position
         self.locationView.updatePosition(position)
     }

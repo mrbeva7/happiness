@@ -6,12 +6,12 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="airportLoc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationAirport" inverseEntity="Location" syncable="YES"/>
     </entity>
-    <entity name="Area" representedClassName=".Area" syncable="YES">
+    <entity name="Area" representedClassName="Area" syncable="YES">
         <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="areaID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="locationLevel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Location" inverseName="locationAreaLevel" inverseEntity="Location" syncable="YES"/>
     </entity>
-    <entity name="Beacon" representedClassName=".Beacon" syncable="YES">
+    <entity name="Beacon" representedClassName="Beacon" syncable="YES">
         <attribute name="beaconID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="major" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="minor" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -44,7 +44,7 @@
     </entity>
     <elements>
         <element name="Airport" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="Area" positionX="-459" positionY="329" width="128" height="90"/>
+        <element name="Area" positionX="-459" positionY="329" width="128" height="88"/>
         <element name="Beacon" positionX="-468" positionY="9" width="128" height="118"/>
         <element name="Location" positionX="-272" positionY="99" width="128" height="195"/>
         <element name="Passenger" positionX="-279" positionY="357" width="128" height="120"/>
