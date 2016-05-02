@@ -22,8 +22,11 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
     let locationManager = EILIndoorLocationManager()
     var location: EILLocation!
     var currentPosition: EILOrientedPoint!
-    var routeLayer: CAShapeLayer! //It draws a cubic Bezier spline in its coordinate space
     var finalPosition: EILOrientedPoint!
+    var routeLayer: CAShapeLayer! //It draws a cubic Bezier spline in its coordinate space
+    var endPoint : CGPoint!
+    var destinationPoint : UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +46,7 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
             if let location = location {
                 self.location = location
                 self.locationView.backgroundColor = UIColor.clearColor()
-                self.locationView.showTrace = true
+                self.locationView.showTrace = false
                 self.locationView.traceColor = UIColor.brownColor()
                 self.locationView.rotateOnPositionUpdate = false
                 //self.locationView.showBeacons = true
@@ -107,6 +110,7 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
         let finalPoint = locationView.calculateRealPointFromPicturePoint(sender.locationInView(locationView))
         self.finalPosition = EILOrientedPoint(x: finalPoint.x, y: finalPoint.y)
         displayRoute()
+        checkDestination()
         print(finalPoint)
     }
     
@@ -126,19 +130,14 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
     func displayRoute(){
         var route = UIBezierPath()
         let startPoint = locationView.calculatePicturePointFromRealPoint(currentPosition)
+        endPoint = locationView.calculatePicturePointFromRealPoint(finalPosition)
         route.moveToPoint(startPoint)
-        
-        let destinationPointImg = UIImage(named: "destinationPoint")
-        let destinationPoint = UIImageView.init(frame: CGRectMake(0,0,50,50)) //Itrepresents the dimensions of width and height.
-        destinationPoint.image = destinationPointImg
-        let destinationP = EILOrientedPoint(x : finalPosition.x, y:finalPosition.y, orientation: 0)
-        self.locationView.drawObjectInBackground(destinationPoint, withPosition: destinationP, identifier: "destinationP")
         
         //let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x :4, y:1.5, orientation: 0))
         //let destinationPoint = locationView.calculatePicturePointFromRealPoint(EILOrientedPoint(x:finalPoint.x, y:finalPoint.y, orientation: 0))
         //route.addLineToPoint(CGPoint(x:finalPoint.x, y:startPoint.y))
-        route.addLineToPoint(CGPoint(x: CGFloat (finalPosition.x), y:startPoint.y))
-        route.addLineToPoint(CGPoint(x: CGFloat (finalPosition.x), y:CGFloat (finalPosition.y)))
+        route.addLineToPoint(CGPoint(x: endPoint.x, y:startPoint.y))
+        route.addLineToPoint(endPoint)
         
         if routeLayer != nil {
             routeLayer.removeFromSuperlayer()
@@ -153,6 +152,17 @@ class MapViewController : UIViewController, UIScrollViewDelegate, UIGestureRecog
         
     }
     
+    func checkDestination() {
+        let destinationPointImg = UIImage(named: "destinationPoint")
+        destinationPoint = UIImageView.init(frame: CGRectMake(0,0,50,50)) //Itrepresents the dimensions of width and height.
+        destinationPoint.image = destinationPointImg
+
+        if (locationView.objectWithidentifier("destinationP") == nil) {
+            self.locationView.drawObjectInForeground(destinationPoint, withPosition: finalPosition, identifier: "destinationP")
+        } else {
+            self.locationView.moveObjectWithIdentifier("destinationP", toPosition: finalPosition, animated: false)
+        }
+    }
     
     func indoorLocationManager(manager: EILIndoorLocationManager!, didFailToUpdatePositionWithError error: NSError!) {
         print("failed to update position: \(error)")

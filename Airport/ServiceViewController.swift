@@ -19,8 +19,28 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
     
     var managedObjectContext : NSManagedObjectContext!
     var services:[NSManagedObject]!
+    var passengerWithBT: [NSManagedObject]!
     var currentDetailViewController: UIViewController
+    
+    @IBOutlet weak var remainingTime: UILabel!
     @IBOutlet weak var ServiceListTable: UITableView!
+    
+    //Mark : timer for Remaining time
+    //let dateFormatter = NSDateFormatter()
+    var currentDate : NSDate = NSDate()
+    var systemTime : NSDate = NSDate()
+    var remainTime : NSTimeInterval = NSTimeInterval()
+    var startTime = NSTimeInterval()
+    var timer = NSTimer()
+    let userCalender = NSCalendar.currentCalendar()
+    
+    let requestedComponent: NSCalendarUnit = [
+        NSCalendarUnit.Month,
+        NSCalendarUnit.Day,
+        NSCalendarUnit.Hour,
+        NSCalendarUnit.Minute,
+        NSCalendarUnit.Second
+    ]
     
     //Reference(init vs viewDidLoad) http://stackoverflow.com/questions/14722300/init-method-vs-a-viewdidload-type-method
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -53,11 +73,31 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         //print("managedObjectContext",managedObjectContext)
         //print("managedObjectContext.persistentStoreCoordinator?.managedObjectModel.entities", managedObjectContext.persistentStoreCoordinator?.managedObjectModel.entities)
         //print("printing services.count",services.count)
-        addDataToService()
-        addDataToArea()
+        //addDataToService()
+        //addDataToArea()
+        addDataToServiceAndArea()
         addDataToBeacon()
-        addDataToLocation()
         self.fetchServices()
+        
+        
+        //Mark : CountDown Timer
+        let countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(printTime), userInfo: nil, repeats: true)
+        
+        print("countDownTimer,\(countDownTimer)")
+    }
+    
+    //Mark : print time for CountDown Timer
+    func printTime(){
+        //dateFormatter.dateFormat = "MM/dd/yy hh:mm:ss a"
+        
+        let startingTime = NSDate()
+        let endingTime = systemTime
+        //let endingTime = fetchBoardingTime()
+        
+        let timeDifference = userCalender.components(requestedComponent, fromDate: startingTime, toDate: endingTime, options:[])
+        
+        remainingTime.text = "\(timeDifference.hour): \(timeDifference.minute):\(timeDifference.second)"
+        
     }
     
     //Reference(viewDidLoad vs viewWillAppear) :http://stackoverflow.com/questions/17362095/about-viewcontrollers-viewdidload-and-viewwillappear-methods
@@ -66,7 +106,31 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
 //    {
 //        super.viewWillAppear(animated)
 //    }
-    
+//    func fetchBoardingTime() -> NSDate
+//    {
+//        //let userService: NSString = "Service"
+//        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+//        var context:NSManagedObjectContext = appDel.managedObjectContext
+//        //request.predicate = NSPredicate(You have to set some format here)
+//        let fetchRequest = NSFetchRequest(entityName: "Passenger")
+//        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+//        fetchRequest.fetchLimit = 1
+//        
+//        //let moc = self.managedObjectContext
+//        //print("Entities: \(moc.persistentStoreCoordinator?.managedObjectModel.entitiesByName)")
+//        //let obj = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext:moc)
+//        //print(obj)
+//        
+//        do{
+//            // let passengerObject = try managedObjectContext.executeFetchRequest(fetchRequest)
+//            // you could try this code : let  result = (try! self.manageContext.executeFetchRequest(FetchRequest)) as! [NSManageObjectClass]
+//            let passengerObject = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as! [NSManagedObject]
+//            self.passengerWithBT = passengerObject as! [NSManagedObject]
+//        }catch let error as NSError{
+//            print("could not fetch boarding time \(error), \(error.userInfo)")
+//        }
+//        return self.passengerWithBT
+//    }
     
     func fetchServices()
         {
@@ -79,10 +143,11 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
             //print(obj)
         
         do{
-            let serviceObjects = try managedObjectContext.executeFetchRequest(fetchRequest)
-            self.services = serviceObjects as! [NSManagedObject]
+            // let serviceObjects = try managedObjectContext.executeFetchRequest(fetchRequest)
+            let serviceObjects = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as! [NSManagedObject]
+            self.services = serviceObjects // as! [NSManagedObject]
         }catch let error as NSError{
-            print("could not fetch entries \(error), \(error.userInfo)")
+            print("could not fetch services \(error), \(error.userInfo)")
         }
         self.ServiceListTable.reloadData()
     }
@@ -96,7 +161,7 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
     
     // MARK: - UITableViewDatasource
     
-    // 11 Populated services into table view
+    // Populates services into table view
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
@@ -121,16 +186,16 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
     
     
     //MARK: - UITableViewDelegate
-//    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//        let service = self.services[indexPath.row]
-//        self.performSegueWithIdentifier("Show Composer", sender: service)
-//    }
-//    
-//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        return true
-//    }
-//    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        self.ServiceListTable.deselectRowAtIndexPath(indexPath, animated: true)
+        let service = self.services[indexPath.row]
+        self.performSegueWithIdentifier("serviceToBoarding", sender: service)
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
 //    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 //        if editingStyle == .Delete{
 //            let service = self.services[indexPath.row]
@@ -148,20 +213,20 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
 //    }
     
      //MARK: - Navigation
-//    
-//     13 - give the compose vc its entry
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-//    {
-//        if segue.identifier == "serviceToBoarding" {
-//            let locationTableViewController = segue.destinationViewController as! LocationTableViewController
-//                locationTableViewController. = sender as? NSManagedObject
-//        }
-//    }
+    
+    //give the compose vc its entry
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "serviceToBoarding" {
+            let locationViewcontroller = segue.destinationViewController as! LocationViewController
+                locationViewcontroller.locations = sender as? [NSManagedObject]
+        }
+    }
     
     // Core Data
     // MARK: Add Data to Service
     // Services(type) for the airport
-    func addDataToService(){
+    func addDataToServiceAndArea(){
         
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext
@@ -169,48 +234,37 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         
         //var servicesList = [NSManagedObject]()
         let newService1 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
-        
         newService1.setValue(1, forKey: "serviceID")
         newService1.setValue("Restaurants", forKey: "name")
-        //try! context.save()
-        //servicesList.append(newService1)
         
-         let newService2 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
+        let newService2 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService2.setValue(2, forKey: "serviceID")
         newService2.setValue("Shops", forKey: "name")
-        //try! context.save()
-        //servicesList.append(newService2)
         
         let newService3 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService3.setValue(3, forKey: "serviceID")
         newService3.setValue("Toilet", forKey: "name")
-        //servicesList.append(newService3)
-        
         
         let newService4 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService4.setValue(4, forKey: "serviceID")
         newService4.setValue("SmokingArea", forKey: "name")
-        //servicesList.append(newService4)
         
         let newService5 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService5.setValue(5, forKey: "serviceID")
         newService5.setValue("Playground", forKey: "name")
-        //servicesList.append(newService5)
         
         let newService6 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService6.setValue(6, forKey: "serviceID")
         newService6.setValue("Powerstation", forKey: "name")
-        //servicesList.append(newService6)
         
         let newService7 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService7.setValue(7, forKey: "serviceID")
         newService7.setValue("CurrencyExchanges", forKey: "name")
-        //servicesList.append(newService7)
         
         let newService8 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService8.setValue(8, forKey: "serviceID")
         newService8.setValue("Info", forKey: "name")
-        //servicesList.append(newService8)
+
         
         let newService9 = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext: self.managedObjectContext)
         newService9.setValue(9, forKey: "serviceID")
@@ -227,36 +281,62 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         newService11.setValue("Gate", forKey: "name")
         //servicesList.append(newService11)
         
+        // MARK: Add Data to AREA
+        // Level for the places in the airport
+        
+      
+        
+         //Restaurant
+//        createNewLocation(1, name: "Hesburger", x: 1, y: 2, area:newArea2, type: newService1, context: context)
+//        createNewLocation(2, name: "KFC", x: 2, y: 3, area:newArea2, type: newService1, context: context)
+//        createNewLocation(3, name: "Robert Coffee Shop", x: 4, y: 5, area:newArea3, type: newService1, context: context)
+//        
+//        //Store
+//        createNewLocation(4, name: "Alepa", x: 4, y: 5, area:newArea2, type: newService2, context: context)
+//        createNewLocation(5, name: "Apteekki", x: 4, y: 5, area:newArea3, type: newService2, context: context)
+//        createNewLocation(6, name: "Duty Free Store", x: 4, y: 5, area:newArea3, type: newService2, context: context)
+//        
+//        //Terminal
+//        createNewLocation(7, name: "Terminal 1", x: 4, y: 5, area:newArea1, type: newService10, context: context)
+//        createNewLocation(8, name: "Terminal 2", x: 4, y: 5, area:newArea1, type: newService10, context: context)
+        
         try! context.save()
         
     }
     
-    // MARK: Add Data to AREA
-    // Level for the places in the airport
+
     func addDataToArea(){
-        
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext
         
-        var newLocationCate = NSEntityDescription.insertNewObjectForEntityForName("Area", inManagedObjectContext: context) as! NSManagedObject
-        
-        newLocationCate.setValue(1, forKey: "areaID")
-        newLocationCate.setValue("1", forKey: "area")
-        
-        newLocationCate.setValue(2, forKey: "areaID")
-        newLocationCate.setValue("2", forKey: "area")
-        
-        newLocationCate.setValue(3, forKey: "areaID")
-        newLocationCate.setValue("3", forKey: "area")
-        
-        newLocationCate.setValue(4, forKey: "areaID")
-        newLocationCate.setValue("4", forKey: "area")
-        
-        
+        let newArea1 = NSEntityDescription.insertNewObjectForEntityForName("Area", inManagedObjectContext: context)
+        newArea1.setValue(1, forKey: "areaID")
+        newArea1.setValue("1", forKey: "area")
+    
+        let newArea2 = NSEntityDescription.insertNewObjectForEntityForName("Area", inManagedObjectContext: context)
+        newArea2.setValue(2, forKey: "areaID")
+        newArea2.setValue("2", forKey: "area")
+    
+        let newArea3 = NSEntityDescription.insertNewObjectForEntityForName("Area", inManagedObjectContext: context)
+        newArea3.setValue(3, forKey: "areaID")
+        newArea3.setValue("3", forKey: "area")
+    
+        let newArea4 = NSEntityDescription.insertNewObjectForEntityForName("Area", inManagedObjectContext: context)
+        newArea4.setValue(4, forKey: "areaID")
+        newArea4.setValue("4", forKey: "area")
         try! context.save()
-        print(newLocationCate)
-        
-    }
+   }
+    
+//    private func createNewLocation(locationId: NSNumber, name: String, x: NSNumber, y: NSNumber, area: Area, type: Service, context: NSManagedObjectContext){
+//        
+//        let newLocation = NSEntityDescription.insertNewObjectForEntityForName("Location", inManagedObjectContext: context) as! Location
+//        newLocation.name = name
+//        newLocation.locationID = locationId
+//        newLocation.x = x
+//        newLocation.y = y
+//        newLocation.locationAreaLevel = area
+//        newLocation.locationService = type
+//    }
     
     
     // MARK: Add Data to BEACON
@@ -293,49 +373,6 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         
         try! context.save()
         print(newBeacon)
-        
-    }
-    
-    
-    // MARK: Add Data to Location
-    // coordinate for the location
-    func addDataToLocation(){
-        
-        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        var context:NSManagedObjectContext = appDel.managedObjectContext
-        
-        var newLocation = NSEntityDescription.insertNewObjectForEntityForName("Location", inManagedObjectContext: context) as! NSManagedObject
-        //TERMINAL : level 1
-        newLocation.setValue(2, forKey: "locationID")
-        newLocation.setValue(1, forKey: "locationLevel")
-        newLocation.setValue("terminal 1", forKey: "name")
-        newLocation.setValue(7, forKey: "x")
-        newLocation.setValue(4, forKey: "y")
-        
-        //RESTAURANT : level 2
-        newLocation.setValue(1, forKey: "locationID")
-        newLocation.setValue(2, forKey: "locationLevel")
-        newLocation.setValue("hesburger", forKey: "name")
-        newLocation.setValue(2, forKey: "x")
-        newLocation.setValue(3, forKey: "y")
-        
-        
-        //SHOP : level 3
-        newLocation.setValue(3, forKey: "locationID")
-        newLocation.setValue(3, forKey: "locationLevel")
-        newLocation.setValue("moonin shop", forKey: "name")
-        newLocation.setValue(4, forKey: "x")
-        newLocation.setValue(5, forKey: "y")
-        
-        //GATE : level 4
-        newLocation.setValue(4, forKey: "locationID")
-        newLocation.setValue(4, forKey: "locationLevel")
-        newLocation.setValue("Gate1", forKey: "name")
-        newLocation.setValue(5, forKey: "x")
-        newLocation.setValue(7, forKey: "y")
-        
-        try! context.save()
-        print(newLocation)
         
     }
 

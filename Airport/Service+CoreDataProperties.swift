@@ -12,7 +12,7 @@
 import Foundation
 import CoreData
 
-@objc(Service)
+
 extension Service {
 
     @NSManaged var name: String?
