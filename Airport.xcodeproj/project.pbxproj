@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6A0D81501CD1A72E00901DAF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D814E1CD1A72E00901DAF /* Model.xcdatamodeld */; };
 		6A0DFA5B1CD7843F00170AC4 /* Nhumo_Mind-Body-and-Soul.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A0DFA5A1CD7843F00170AC4 /* Nhumo_Mind-Body-and-Soul.mp3 */; };
+		6A0DFA5F1CD79D2200170AC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A0DFA5E1CD79D2200170AC4 /* Main.storyboard */; };
 		6A0F3CB11CD5FFBC004A97BD /* AirportModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A0F3CAF1CD5FFBC004A97BD /* AirportModel.xcdatamodeld */; };
 		6A11A8131CD732580020262B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11A8121CD732580020262B /* LocationViewController.swift */; };
 		6A1411681CD3FBC70007CD5D /* DataControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1411671CD3FBC70007CD5D /* DataControllerViewController.swift */; };
@@ -62,7 +63,6 @@
 		6A3170A91CD3CB8E0093FE0C /* Pods.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6A3170771CD3CB8E0093FE0C /* Pods.debug.xcconfig */; };
 		6A3170AA1CD3CB8E0093FE0C /* Pods.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6A3170781CD3CB8E0093FE0C /* Pods.release.xcconfig */; };
 		793239871CCE2AB2005A9D8A /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793239861CCE2AB2005A9D8A /* ServiceViewController.swift */; };
-		7963409E1CD0052400E3C567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7963409D1CD0052400E3C567 /* Main.storyboard */; };
 		7969A70F1CD3FD5C00D8CDD7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7969A70E1CD3FD5C00D8CDD7 /* Services.swift */; };
 		799099E51CD5411700572FA8 /* BarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799099E41CD5411700572FA8 /* BarCodeViewController.swift */; };
 		79B50AB91CC96F19005A2CF9 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B50AB81CC96F19005A2CF9 /* SecurityViewController.swift */; };
@@ -98,6 +98,7 @@
 		6A0D814F1CD1A72E00901DAF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6A0D818C1CD1F86100901DAF /* Airport-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Airport-Bridging-Header.h"; sourceTree = "<group>"; };
 		6A0DFA5A1CD7843F00170AC4 /* Nhumo_Mind-Body-and-Soul.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Nhumo_Mind-Body-and-Soul.mp3"; sourceTree = "<group>"; };
+		6A0DFA5E1CD79D2200170AC4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6A0F3CB01CD5FFBC004A97BD /* AirportModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AirportModel.xcdatamodel; sourceTree = "<group>"; };
 		6A11A8121CD732580020262B /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		6A1411671CD3FBC70007CD5D /* DataControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataControllerViewController.swift; sourceTree = "<group>"; };
@@ -278,7 +279,6 @@
 		6A3170771CD3CB8E0093FE0C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
 		6A3170781CD3CB8E0093FE0C /* Pods.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
 		793239861CCE2AB2005A9D8A /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
-		7963409D1CD0052400E3C567 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7969A7041CD3499E00D8CDD7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7969A70C1CD3723100D8CDD7 /* ServiceHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceHomeViewController.swift; path = ../ServiceHomeViewController.swift; sourceTree = "<group>"; };
 		7969A70E1CD3FD5C00D8CDD7 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
@@ -678,9 +678,9 @@
 		79F47DFE1CB672B200D723C4 /* Airport */ = {
 			isa = PBXGroup;
 			children = (
+				6A0DFA5E1CD79D2200170AC4 /* Main.storyboard */,
 				6A0DFA5A1CD7843F00170AC4 /* Nhumo_Mind-Body-and-Soul.mp3 */,
 				6A0F3CAF1CD5FFBC004A97BD /* AirportModel.xcdatamodeld */,
-				7963409D1CD0052400E3C567 /* Main.storyboard */,
 				799099E41CD5411700572FA8 /* BarCodeViewController.swift */,
 				7969A70E1CD3FD5C00D8CDD7 /* Services.swift */,
 				7969A70C1CD3723100D8CDD7 /* ServiceHomeViewController.swift */,
@@ -828,6 +828,7 @@
 				6A31709B1CD3CB8E0093FE0C /* beaconWhiteSmall.png in Resources */,
 				6A31707C1CD3CB8E0093FE0C /* avatar@3x.png in Resources */,
 				6A3170841CD3CB8E0093FE0C /* beaconBlackSmall@2x.png in Resources */,
+				6A0DFA5F1CD79D2200170AC4 /* Main.storyboard in Resources */,
 				6A31707D1CD3CB8E0093FE0C /* avatar_noarrow.png in Resources */,
 				6A3170A81CD3CB8E0093FE0C /* Pods-resources.sh in Resources */,
 				6A3170A51CD3CB8E0093FE0C /* Pods-acknowledgements.plist in Resources */,
@@ -855,7 +856,6 @@
 				6A31708D1CD3CB8E0093FE0C /* beaconGreySmall@2x.png in Resources */,
 				6A3170881CD3CB8E0093FE0C /* beaconBlueberrySmall@3x.png in Resources */,
 				6A31708C1CD3CB8E0093FE0C /* beaconGreySmall.png in Resources */,
-				7963409E1CD0052400E3C567 /* Main.storyboard in Resources */,
 				6A3170A31CD3CB8E0093FE0C /* Manifest.lock in Resources */,
 				6A3170891CD3CB8E0093FE0C /* beaconCandySmall.png in Resources */,
 				6A3170951CD3CB8E0093FE0C /* beaconMintSmall.png in Resources */,

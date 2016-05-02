@@ -34,6 +34,8 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
     var startTime = NSTimeInterval()
     var timer = NSTimer()
     let userCalender = NSCalendar.currentCalendar()
+    let dateFormatter = NSDateFormatter()
+    var boardingT : NSDate = NSDate()
     
     //Mark : Music variables
     @IBOutlet var PausePlay: UIButton!
@@ -85,6 +87,7 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         addDataToServiceAndArea()
         addDataToBeacon()
         self.fetchServices()
+        self.fetchBoardingTime()
         
         
         //Mark : CountDown Timer
@@ -111,7 +114,7 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         //dateFormatter.dateFormat = "MM/dd/yy hh:mm:ss a"
         
         let startingTime = NSDate()
-        let endingTime = systemTime
+        let endingTime = boardingTs
         //let endingTime = fetchBoardingTime()
         
         let timeDifference = userCalender.components(requestedComponent, fromDate: startingTime, toDate: endingTime, options:[])
@@ -136,31 +139,37 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-//    func fetchBoardingTime() -> NSDate
-//    {
-//        //let userService: NSString = "Service"
-//        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-//        var context:NSManagedObjectContext = appDel.managedObjectContext
-//        //request.predicate = NSPredicate(You have to set some format here)
-//        let fetchRequest = NSFetchRequest(entityName: "Passenger")
+    func fetchBoardingTime()
+    {
+        //let userService: NSString = "Service"
+        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext
+        //request.predicate = NSPredicate(You have to set some format here)
+        let fetchRequest = NSFetchRequest(entityName: "Passenger")
 //        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
 //        fetchRequest.fetchLimit = 1
-//        
-//        //let moc = self.managedObjectContext
-//        //print("Entities: \(moc.persistentStoreCoordinator?.managedObjectModel.entitiesByName)")
-//        //let obj = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext:moc)
-//        //print(obj)
-//        
-//        do{
-//            // let passengerObject = try managedObjectContext.executeFetchRequest(fetchRequest)
-//            // you could try this code : let  result = (try! self.manageContext.executeFetchRequest(FetchRequest)) as! [NSManageObjectClass]
-//            let passengerObject = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as! [NSManagedObject]
-//            self.passengerWithBT = passengerObject as! [NSManagedObject]
-//        }catch let error as NSError{
-//            print("could not fetch boarding time \(error), \(error.userInfo)")
-//        }
+        
+        //let moc = self.managedObjectContext
+        //print("Entities: \(moc.persistentStoreCoordinator?.managedObjectModel.entitiesByName)")
+        //let obj = NSEntityDescription.insertNewObjectForEntityForName("Service", inManagedObjectContext:moc)
+        //print(obj)
+        
+        do{
+            // let passengerObject = try managedObjectContext.executeFetchRequest(fetchRequest)
+            // you could try this code : let  result = (try! self.manageContext.executeFetchRequest(FetchRequest)) as! [NSManageObjectClass]
+//            var passengerObject = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as! [NSManagedObject]
+//            let object = passengerObject.popLast()
+            let passengerObjects = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as! [NSManagedObject]
+            let index = passengerObjects.count-1
+            let object = passengerObjects[index]
+            print("Boarding time: \(object.valueForKey("boardingTime"))")
+            boardingT = object.valueForKey("boardingTime") as! NSDate
+            print("formattedBoardingTime: \(boardingT)")
+        }catch let error as NSError{
+            print("could not fetch boarding time \(error), \(error.userInfo)")
+        }
 //        return self.passengerWithBT
-//    }
+    }
     
     func fetchServices()
         {
@@ -226,6 +235,7 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         return true
     }
     
+
 //    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 //        if editingStyle == .Delete{
 //            let service = self.services[indexPath.row]
@@ -242,14 +252,13 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
 //        }
 //    }
     
-     //MARK: - Navigation
-    
-    //give the compose vc its entry
+   //MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "serviceToBoarding" {
             let locationViewcontroller = segue.destinationViewController as! LocationViewController
                 locationViewcontroller.locations = sender as? [NSManagedObject]
+            print("print sender: \(sender)")
         }
     }
     

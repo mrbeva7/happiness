@@ -57,6 +57,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pdc-Fm-Hpw" kind="show" identifier="serviceToBoarding" id="5ug-1A-Ltc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -91,11 +94,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgw-Xq-GPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="pAx-b5-zAe">
-                    <connections>
-                        <segue destination="pdc-Fm-Hpw" kind="show" identifier="serviceToBoarding" id="EzA-Hl-GOJ"/>
-                    </connections>
-                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="pAx-b5-zAe"/>
                 <swipeGestureRecognizer direction="right" id="tdQ-QR-u12">
                     <connections>
                         <segue destination="gLX-eD-JBK" kind="show" id="Gja-k8-27E"/>
@@ -502,12 +501,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QR result: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4X-y3-kN6">
-                                <rect key="frame" x="20" y="518" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.99587684869766235" green="0.99227434396743774" blue="0.99199777841567993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gX-kU-msq">
                                 <rect key="frame" x="20" y="28" width="40" height="40"/>
                                 <gestureRecognizers/>
@@ -518,6 +511,12 @@
                                     <outletCollection property="gestureRecognizers" destination="RAJ-lX-2F2" appends="YES" id="yEM-ns-Wpm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QR result: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4X-y3-kN6">
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99587684869766235" green="0.99227434396743774" blue="0.99199777841567993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -777,9 +776,9 @@
         <image name="sky_hd-640*1136" width="640" height="1137"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EzA-Hl-GOJ"/>
-        <segue reference="gZU-tF-eIp"/>
-        <segue reference="0D0-3c-Wya"/>
         <segue reference="Gja-k8-27E"/>
+        <segue reference="gZU-tF-eIp"/>
+        <segue reference="5ug-1A-Ltc"/>
+        <segue reference="yko-f6-dT7"/>
     </inferredMetricsTieBreakers>
 </document>
