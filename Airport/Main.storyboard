@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Service View Controller-->
@@ -18,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Services" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usg-w2-2dB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Services" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usg-w2-2dB">
                                 <rect key="frame" x="20" y="20" width="280" height="30"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,7 +37,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Qh-Zc-WOS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Qh-Zc-WOS">
                                 <rect key="frame" x="0.0" y="91" width="320" height="477"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -63,9 +64,20 @@
                                     <outlet property="delegate" destination="l5J-B8-zFA" id="IC5-r1-Yaw"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-ct-25L">
+                                <rect key="frame" x="270" y="28" width="30" height="30"/>
+                                <state key="normal" image="pause"/>
+                                <connections>
+                                    <action selector="PausePlay:" destination="l5J-B8-zFA" eventType="touchUpInside" id="Ban-xI-ZYd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="9pi-ct-25L" firstAttribute="centerY" secondItem="usg-w2-2dB" secondAttribute="centerY" constant="8" id="D6C-bH-9Sc"/>
+                            <constraint firstItem="9pi-ct-25L" firstAttribute="centerX" secondItem="0Qh-Zc-WOS" secondAttribute="centerX" constant="125" id="nOO-zL-q7m"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="pAx-b5-zAe" appends="YES" id="hd2-SH-7ab"/>
                             <outletCollection property="gestureRecognizers" destination="tdQ-QR-u12" appends="YES" id="QrB-bt-6r2"/>
@@ -73,6 +85,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="PausePlay" destination="9pi-ct-25L" id="N20-3a-SPe"/>
                         <outlet property="ServiceListTable" destination="0Qh-Zc-WOS" id="gh6-cW-s9O"/>
                         <outlet property="remainingTime" destination="eiV-aE-oXy" id="eiZ-yW-gjs"/>
                     </connections>
@@ -90,6 +103,112 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="451" y="368"/>
+        </scene>
+        <!--Service Home View Controller-->
+        <scene sceneID="gYf-OE-XqA">
+            <objects>
+                <viewController id="jUR-AF-gwF" customClass="ServiceHomeViewController" customModule="Airport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GBM-tO-e0V"/>
+                        <viewControllerLayoutGuide type="bottom" id="mBi-Zo-Il6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0BI-yj-Gvx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky_hd-640*1136" translatesAutoresizingMaskIntoConstraints="NO" id="Duu-oe-acc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-Mk-ws4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TvX-B4-Nug">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sk9-pu-htq">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="ZdH-vB-ut8">
+                                                <size key="itemSize" width="240" height="120"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Service Cell" id="aYj-Y1-3r5" customClass="ServiceCollectionViewCell" customModule="Airport" customModuleProvider="target">
+                                                    <rect key="frame" x="40" y="0.0" width="240" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Helsinki_smoking_room_G36" translatesAutoresizingMaskIntoConstraints="NO" id="vrP-0g-sou">
+                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
+                                                            </imageView>
+                                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJC-Nz-y6F">
+                                                                <rect key="frame" x="0.0" y="90" width="240" height="30"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="k7E-ux-MKM">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smoking Room" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOo-qW-pJk">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </view>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="JO4-qn-dGG"/>
+                                                                </constraints>
+                                                                <blurEffect style="extraLight"/>
+                                                            </visualEffectView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="xJC-Nz-y6F" secondAttribute="trailing" id="BJv-pp-Keu"/>
+                                                        <constraint firstItem="vrP-0g-sou" firstAttribute="leading" secondItem="aYj-Y1-3r5" secondAttribute="leading" id="JbH-uO-VQO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vrP-0g-sou" secondAttribute="trailing" id="oiT-L9-4vP"/>
+                                                        <constraint firstItem="vrP-0g-sou" firstAttribute="top" secondItem="aYj-Y1-3r5" secondAttribute="top" id="rKM-hj-3vC"/>
+                                                        <constraint firstAttribute="bottom" secondItem="vrP-0g-sou" secondAttribute="bottom" id="sre-P7-DQZ"/>
+                                                        <constraint firstItem="xJC-Nz-y6F" firstAttribute="leading" secondItem="aYj-Y1-3r5" secondAttribute="leading" id="v6c-XO-pZO"/>
+                                                        <constraint firstAttribute="bottom" secondItem="xJC-Nz-y6F" secondAttribute="bottom" id="xey-6B-tCd"/>
+                                                    </constraints>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="jUR-AF-gwF" id="ApQ-uI-sj6"/>
+                                                <outlet property="delegate" destination="jUR-AF-gwF" id="1pi-ft-J6i"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GAa-Mk-ws4" firstAttribute="top" secondItem="0BI-yj-Gvx" secondAttribute="top" id="11R-8W-hQN"/>
+                            <constraint firstItem="mBi-Zo-Il6" firstAttribute="top" secondItem="Duu-oe-acc" secondAttribute="bottom" id="Khc-v4-5v0"/>
+                            <constraint firstAttribute="trailing" secondItem="Duu-oe-acc" secondAttribute="trailing" id="P92-ox-xDf"/>
+                            <constraint firstItem="Duu-oe-acc" firstAttribute="top" secondItem="0BI-yj-Gvx" secondAttribute="top" id="WdF-0x-We8"/>
+                            <constraint firstItem="Duu-oe-acc" firstAttribute="leading" secondItem="0BI-yj-Gvx" secondAttribute="leading" id="bzE-yz-wEq"/>
+                            <constraint firstItem="mBi-Zo-Il6" firstAttribute="top" secondItem="GAa-Mk-ws4" secondAttribute="bottom" id="gD8-8v-AFC"/>
+                            <constraint firstItem="GAa-Mk-ws4" firstAttribute="leading" secondItem="0BI-yj-Gvx" secondAttribute="leading" id="gDI-Tz-H6A"/>
+                            <constraint firstAttribute="trailing" secondItem="GAa-Mk-ws4" secondAttribute="trailing" id="iLS-4t-mLc"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Duu-oe-acc" id="Uv5-bC-d4d"/>
+                        <outlet property="collectionView" destination="sk9-pu-htq" id="UEe-29-oJN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkN-Q0-iIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="1107"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="Jxv-2k-G3i">
@@ -165,6 +284,9 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63529411759999999" green="0.87058823529999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="cf2-0N-t0o" secondAttribute="centerX" id="f1N-mM-cbc"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -331,6 +453,43 @@
             </objects>
             <point key="canvasLocation" x="-646" y="368"/>
         </scene>
+        <!--Bar Code View Controller-->
+        <scene sceneID="j0N-49-baP">
+            <objects>
+                <viewController id="ddQ-aU-928" customClass="BarCodeViewController" customModule="Airport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cVD-36-i3Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="rgg-p9-6b6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FwS-H6-lS0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Barcode result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuQ-8G-CrS">
+                                <rect key="frame" x="20" y="465" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Barcode type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOD-O3-vnN">
+                                <rect key="frame" x="20" y="506" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="lblDataInfo" destination="MuQ-8G-CrS" id="UFd-Nf-Hiq"/>
+                        <outlet property="lblDataType" destination="YOD-O3-vnN" id="pyS-dW-jk8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KEI-im-4uT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1148" y="-388"/>
+        </scene>
         <!--Code Scanner View Controller-->
         <scene sceneID="GVz-Gq-IZI">
             <objects>
@@ -370,7 +529,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9S-mp-Dud" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="RAJ-lX-2F2">
                     <connections>
-                        <segue destination="SDZ-fz-5FP" kind="show" id="yko-f6-dT7"/>
+                        <segue destination="SDZ-fz-5FP" kind="show" identifier="QRreturn" id="yko-f6-dT7"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -609,10 +768,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Helsinki_smoking_room_G36" width="960" height="448"/>
         <image name="QR" width="753" height="753"/>
         <image name="airportMap" width="295" height="207"/>
         <image name="backButton" width="512" height="512"/>
         <image name="blurrysky" width="960" height="270"/>
+        <image name="pause" width="50" height="50"/>
+        <image name="sky_hd-640*1136" width="640" height="1137"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EzA-Hl-GOJ"/>

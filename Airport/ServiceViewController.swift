@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreData
+import AVFoundation
 
 
 //Reference (UIViewController vs UITableView) :
@@ -33,6 +34,12 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
     var startTime = NSTimeInterval()
     var timer = NSTimer()
     let userCalender = NSCalendar.currentCalendar()
+    
+    //Mark : Music variables
+    @IBOutlet var PausePlay: UIButton!
+    var BackgroundAudio = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Nhumo_Mind-Body-and-Soul", ofType: "mp3")!)
+    var BackgroundAudioPlayer: AVAudioPlayer!
+    
     
     let requestedComponent: NSCalendarUnit = [
         NSCalendarUnit.Month,
@@ -84,6 +91,19 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         let countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(printTime), userInfo: nil, repeats: true)
         
         print("countDownTimer,\(countDownTimer)")
+        
+        //Mark : Music
+        do {
+            try BackgroundAudioPlayer = AVAudioPlayer(contentsOfURL: BackgroundAudio)
+            BackgroundAudioPlayer.play()
+        } catch {
+            print("error")
+        }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        BackgroundAudioPlayer.stop()
     }
     
     //Mark : print time for CountDown Timer
@@ -102,10 +122,20 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
     
     //Reference(viewDidLoad vs viewWillAppear) :http://stackoverflow.com/questions/17362095/about-viewcontrollers-viewdidload-and-viewwillappear-methods
     
-//    override func viewWillAppear(animated: Bool)
-//    {
-//        super.viewWillAppear(animated)
-//    }
+    @IBAction func PausePlay(sender: AnyObject) {
+        
+        if (BackgroundAudioPlayer.playing == true){
+            BackgroundAudioPlayer.stop()
+            //PausePlay.setImage("play", forState: UIControlState.Normal)
+            PausePlay.setImage(UIImage(named: "play"), forState: .Normal)
+        } else {
+            BackgroundAudioPlayer.play()
+            //PausePlay.setImage("pause", forState: UIControlState.Normal)
+            PausePlay.setImage(UIImage(named: "pause"), forState: .Normal)
+        }
+        
+    }
+    
 //    func fetchBoardingTime() -> NSDate
 //    {
 //        //let userService: NSString = "Service"
@@ -373,7 +403,5 @@ class ServiceViewController : UIViewController, UITableViewDataSource, UITableVi
         
         try! context.save()
         print(newBeacon)
-        
     }
-
 }
